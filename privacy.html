@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Privacy Policy - Voice Clicker Pro</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <h1>Voice Clicker Pro</h1>
+    <div>
+        <button onclick="setLang('es')">Español</button>
+        <button onclick="setLang('en')">English</button>
+    </div>
+</header>
+
+<main id="content"></main>
+
+<script>
+const content = {
+    es: `
+    <h2>Política de Privacidad</h2>
+    <p><strong>Fecha de entrada en vigor:</strong> 2026</p>
+
+    <h3>1. Información general</h3>
+    <p>Voice Clicker Pro es una aplicación de escritorio diseñada para permitir el control del ordenador mediante comandos de voz y automatización.</p>
+
+    <h3>2. Recopilación de datos</h3>
+    <p>La aplicación NO recopila, almacena ni comparte datos personales del usuario.</p>
+
+    <h3>3. Uso del micrófono</h3>
+    <p>Se utiliza únicamente para reconocimiento de voz. El audio se procesa localmente y no se envía a servidores externos.</p>
+
+    <h3>4. Conexión a internet</h3>
+    <p>Puede usarse para funciones opcionales como control remoto en red local. No se envían datos personales.</p>
+
+    <h3>5. Almacenamiento</h3>
+    <p>Los datos se guardan únicamente en el dispositivo del usuario.</p>
+
+    <h3>6. Seguridad</h3>
+    <p>No se transmiten datos sensibles, minimizando riesgos.</p>
+
+    <h3>7. Cambios</h3>
+    <p>Esta política puede actualizarse en cualquier momento.</p>
+
+    <h3>8. Contacto</h3>
+    <p>Email: TUEMAIL@AQUI.COM</p>
+    `,
+
+    en: `
+    <h2>Privacy Policy</h2>
+    <p><strong>Effective date:</strong> 2026</p>
+
+    <h3>1. General Information</h3>
+    <p>Voice Clicker Pro is a desktop application designed to control a computer using voice commands.</p>
+
+    <h3>2. Data Collection</h3>
+    <p>The application does NOT collect, store, or share personal data.</p>
+
+    <h3>3. Microphone Usage</h3>
+    <p>The microphone is used only for voice recognition. Audio is processed locally and never sent to external servers.</p>
+
+    <h3>4. Internet Usage</h3>
+    <p>May be used for optional features such as local network remote control. No personal data is transmitted.</p>
+
+    <h3>5. Data Storage</h3>
+    <p>All data is stored locally on the user's device.</p>
+
+    <h3>6. Security</h3>
+    <p>No sensitive data is transmitted.</p>
+
+    <h3>7. Changes</h3>
+    <p>This policy may be updated.</p>
+
+    <h3>8. Contact</h3>
+    <p>Email: YOURMAIL@HERE.COM</p>
+    `
+};
+
+function setLang(lang) {
+    document.getElementById("content").innerHTML = content[lang];
+}
+
+// idioma por defecto
+setLang("en");
+</script>
+
+<footer>
+    <p>© 2026 Voice Clicker Pro</p>
+</footer>
+
+</body>
+</html>
