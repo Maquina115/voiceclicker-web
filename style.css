@@ -1,34 +1,69 @@
+:root {
+    --primary: #0078d4;
+    --dark: #201f1e;
+    --light: #f3f2f1;
+    --text: #323130;
+}
+
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    margin: 0;
+    color: var(--text);
+    background-color: #ffffff;
     line-height: 1.6;
-    color: #333;
-    max-width: 800px;
+}
+
+.container {
+    max-width: 900px;
     margin: 0 auto;
-    padding: 20px;
-    background-color: #f4f7f6;
+    padding: 0 20px;
+}
+
+nav {
+    background: var(--dark);
+    color: white;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+}
+
+nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo { font-weight: bold; font-size: 1.2rem; }
+
+.links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 0.9rem;
 }
 
 header {
-    text-align: center;
-    padding: 50px 0;
-    background: #0078d4;
+    background: var(--primary);
     color: white;
-    border-radius: 8px;
+    padding: 80px 0;
+    text-align: center;
 }
 
-section {
-    background: white;
-    padding: 20px;
-    margin-top: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
+h1 { margin: 0; font-size: 2.5rem; }
 
-h2 { color: #0078d4; }
+section { padding: 40px 0; }
+
+#privacy { background: #faf9f8; padding: 40px; border-radius: 8px; margin: 40px 0; }
+
+.last-update { font-style: italic; color: #666; }
+
+h3 { color: var(--primary); margin-top: 30px; }
+
+hr { border: 0; border-top: 1px solid #eee; margin: 40px 0; }
 
 footer {
+    background: var(--light);
+    padding: 20px 0;
     text-align: center;
-    margin-top: 50px;
-    font-size: 0.9em;
-    color: #666;
+    font-size: 0.8rem;
 }
