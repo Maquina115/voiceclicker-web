@@ -1,185 +1,412 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Privacy Policy - Voice Clicker Pro</title>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        .lang-btn {
-            margin: 5px;
-            padding: 8px 12px;
-            border: none;
-            border-radius: 6px;
-            background: #3b82f6;
-            color: white;
-            cursor: pointer;
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Política de Privacidad – Voice Clicker Pro</title>
+
+<style>
+    body {
+        font-family: "Segoe UI", Roboto, Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background: #f7f7f9;
+        color: #222;
+        line-height: 1.6;
+    }
+
+    header {
+        background: #1a73e8;
+        color: white;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .container {
+        max-width: 1100px;
+        margin: auto;
+        background: white;
+        padding: 40px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    h1, h2, h3 {
+        color: #1a73e8;
+        margin-top: 40px;
+    }
+
+    p, li {
+        font-size: 16px;
+    }
+
+    .lang-selector {
+        text-align: right;
+        margin-bottom: 20px;
+    }
+
+    select {
+        padding: 8px 12px;
+        font-size: 15px;
+        border-radius: 6px;
+        border: 1px solid #ccc;
+    }
+
+    @media (max-width: 700px) {
+        .container {
+            padding: 20px;
         }
-    </style>
-</head>
-<body>
-
-<header>
-    <h1>Voice Clicker Pro</h1>
-    <div>
-        <button class="lang-btn" onclick="setLang('es')">Español</button>
-        <button class="lang-btn" onclick="setLang('en')">English</button>
-    </div>
-</header>
-
-<main id="content"></main>
+        h1 { font-size: 26px; }
+    }
+</style>
 
 <script>
-const content = {
-
-es: `
-<h2>Política de Privacidad</h2>
-<p><strong>Fecha de entrada en vigor:</strong> 2026</p>
-
-<h3>1. Introducción</h3>
-<p>Voice Clicker Pro es una aplicación de escritorio diseñada para permitir el control del ordenador mediante comandos de voz y automatización de teclado y ratón. La privacidad del usuario es una prioridad fundamental.</p>
-
-<h3>2. Responsable del tratamiento</h3>
-<p>El responsable de esta aplicación es el desarrollador de Voice Clicker Pro. Para cualquier consulta, puede contactar en: support@voiceclickerpro.com</p>
-
-<h3>3. Datos personales</h3>
-<p>Voice Clicker Pro no recopila datos personales identificables del usuario. No se requiere registro ni autenticación.</p>
-
-<h3>4. Uso del micrófono</h3>
-<p>La aplicación solicita acceso al micrófono exclusivamente para reconocer comandos de voz.</p>
-<ul>
-<li>El audio se procesa localmente.</li>
-<li>No se graban conversaciones.</li>
-<li>No se envían datos de audio a servidores externos.</li>
-</ul>
-
-<h3>5. Procesamiento local</h3>
-<p>Todo el reconocimiento de voz se realiza en el dispositivo mediante modelos locales. Esto garantiza que la información no salga del equipo del usuario.</p>
-
-<h3>6. Uso de red</h3>
-<p>La aplicación puede utilizar la red en funciones opcionales:</p>
-<ul>
-<li>Control remoto dentro de la red local</li>
-<li>Comunicación entre dispositivos configurados por el usuario</li>
-</ul>
-<p>No se envían datos personales a servidores externos.</p>
-
-<h3>7. Almacenamiento de datos</h3>
-<p>Se pueden almacenar localmente:</p>
-<ul>
-<li>Configuraciones de usuario</li>
-<li>Acciones personalizadas</li>
-<li>Preferencias de idioma</li>
-</ul>
-<p>Estos datos permanecen únicamente en el dispositivo del usuario.</p>
-
-<h3>8. Seguridad</h3>
-<p>La aplicación está diseñada para minimizar riesgos:</p>
-<ul>
-<li>No transmite datos sensibles</li>
-<li>No utiliza servicios en la nube</li>
-<li>Opera de forma local</li>
-</ul>
-
-<h3>9. Servicios de terceros</h3>
-<p>La aplicación utiliza bibliotecas de terceros para su funcionamiento (por ejemplo, reconocimiento de voz), pero estas no recopilan datos personales dentro del contexto de la aplicación.</p>
-
-<h3>10. Derechos del usuario</h3>
-<p>De acuerdo con el RGPD, los usuarios tienen derecho a:</p>
-<ul>
-<li>Acceder a sus datos</li>
-<li>Rectificar datos</li>
-<li>Eliminar datos</li>
-<li>Limitar el tratamiento</li>
-</ul>
-<p>Dado que la aplicación no recopila datos personales, estos derechos no requieren acciones adicionales.</p>
-
-<h3>11. Cambios en la política</h3>
-<p>Esta política puede actualizarse en cualquier momento. Se recomienda revisarla periódicamente.</p>
-
-<h3>12. Contacto</h3>
-<p>Email: support@voiceclickerpro.com</p>
-`,
-
-en: `
-<h2>Privacy Policy</h2>
-<p><strong>Effective date:</strong> 2026</p>
-
-<h3>1. Introduction</h3>
-<p>Voice Clicker Pro is a desktop application designed to control a computer using voice commands and automation. User privacy is a core priority.</p>
-
-<h3>2. Data Controller</h3>
-<p>The developer of Voice Clicker Pro is responsible for this application. Contact: support@voiceclickerpro.com</p>
-
-<h3>3. Personal Data</h3>
-<p>The application does not collect personally identifiable information. No registration is required.</p>
-
-<h3>4. Microphone Usage</h3>
-<p>The application uses the microphone solely for voice command recognition.</p>
-<ul>
-<li>Audio is processed locally</li>
-<li>No recordings are stored</li>
-<li>No audio is transmitted externally</li>
-</ul>
-
-<h3>5. Local Processing</h3>
-<p>All voice recognition is performed locally on the user's device using offline models.</p>
-
-<h3>6. Network Usage</h3>
-<p>Network features are optional and may include:</p>
-<ul>
-<li>Local network remote control</li>
-<li>Device communication within user configuration</li>
-</ul>
-<p>No personal data is transmitted to external servers.</p>
-
-<h3>7. Data Storage</h3>
-<p>The application may store locally:</p>
-<ul>
-<li>User configurations</li>
-<li>Custom actions</li>
-<li>Language preferences</li>
-</ul>
-<p>All data remains on the user’s device.</p>
-
-<h3>8. Security</h3>
-<p>The application is designed with security in mind:</p>
-<ul>
-<li>No sensitive data transmission</li>
-<li>No cloud services used</li>
-<li>Fully local operation</li>
-</ul>
-
-<h3>9. Third-party Services</h3>
-<p>The application uses third-party libraries (e.g., voice recognition), but these do not collect personal data within this app.</p>
-
-<h3>10. User Rights</h3>
-<p>Under GDPR, users have rights including:</p>
-<ul>
-<li>Access</li>
-<li>Rectification</li>
-<li>Deletion</li>
-<li>Restriction</li>
-</ul>
-<p>Since no personal data is collected, these rights require no action.</p>
-
-<h3>11. Changes</h3>
-<p>This policy may be updated periodically.</p>
-
-<h3>12. Contact</h3>
-<p>Email: support@voiceclickerpro.com</p>
-`
-};
-
-function setLang(lang) {
-    document.getElementById("content").innerHTML = content[lang];
+function changeLanguage() {
+    const lang = document.getElementById("language").value;
+    document.querySelectorAll("[data-lang]").forEach(el => {
+        el.style.display = el.getAttribute("data-lang") === lang ? "block" : "none";
+    });
 }
-
-setLang("en");
 </script>
 
-<footer>
-    <p>© 2026 Voice Clicker Pro</p>
-</footer>
+</head>
+<body onload="changeLanguage()">
+
+<header>
+    <h1>Política de Privacidad – Voice Clicker Pro</h1>
+</header>
+
+<div class="container">
+
+<div class="lang-selector">
+    <label for="language"><strong>Idioma / Language:</strong></label>
+    <select id="language" onchange="changeLanguage()">
+        <option value="es">Español</option>
+        <option value="en">English</option>
+    </select>
+</div>
+
+<!-- ========================================================= -->
+<!-- ======================= ESPAÑOL ========================== -->
+<!-- ========================================================= -->
+
+<div data-lang="es">
+
+<h2>1. Introducción</h2>
+<p>
+La presente Política de Privacidad regula el tratamiento de datos personales realizado por la aplicación de escritorio <strong>Voice Clicker Pro</strong> (en adelante, “la Aplicación”), desarrollada para sistemas Windows y orientada al control del ordenador mediante comandos de voz y automatización de teclado y ratón.
+</p>
+<p>
+Este documento cumple con el <strong>Reglamento (UE) 2016/679</strong> (Reglamento General de Protección de Datos, “GDPR”) y con los requisitos de privacidad exigidos por <strong>Microsoft Store</strong>.
+</p>
+<p>
+Voice Clicker Pro ha sido diseñada bajo un enfoque de <strong>privacidad por defecto y por diseño</strong>, garantizando que todo el procesamiento se realiza de forma local en el dispositivo del usuario, sin transmisión de datos a servidores externos.
+</p>
+
+<h2>2. Identidad del Responsable del Tratamiento</h2>
+<p>
+El responsable del tratamiento de los datos personales (cuando existan) es:
+</p>
+<p>
+<strong>Voice Clicker Pro – Departamento Legal</strong><br>
+Correo de contacto: <a href="mailto:support@voiceclickerpro.com">support@voiceclickerpro.com</a><br>
+Año de referencia: 2026
+</p>
+
+<h2>3. Datos que se recopilan</h2>
+<p>
+Voice Clicker Pro ha sido diseñada para <strong>no recopilar, almacenar ni transmitir datos personales</strong>. Esto incluye:
+</p>
+<ul>
+    <li>No se recogen nombres, direcciones, correos electrónicos ni identificadores.</li>
+    <li>No se crean perfiles de usuario.</li>
+    <li>No se registran comandos de voz.</li>
+    <li>No se almacenan grabaciones de audio.</li>
+    <li>No se recopilan métricas de uso, telemetría ni analíticas.</li>
+</ul>
+<p>
+La ausencia de recopilación de datos constituye una decisión técnica y jurídica basada en el principio de <strong>minimización de datos</strong> (art. 5.1.c GDPR).
+</p>
+
+<h2>4. Uso del micrófono</h2>
+<p>
+La Aplicación requiere acceso al <strong>micrófono</strong> para poder ejecutar comandos de voz. Este acceso se utiliza exclusivamente para:
+</p>
+<ul>
+    <li>Capturar audio en tiempo real.</li>
+    <li>Procesar dicho audio localmente mediante el motor de reconocimiento de voz offline Vosk.</li>
+    <li>Interpretar comandos para automatizar acciones del sistema.</li>
+</ul>
+<p>
+El audio capturado:
+</p>
+<ul>
+    <li>No se envía a Internet.</li>
+    <li>No se transmite a terceros.</li>
+    <li>No se almacena en el dispositivo.</li>
+    <li>No se utiliza para entrenar modelos.</li>
+</ul>
+<p>
+El procesamiento es estrictamente efímero: el audio se analiza en memoria y se descarta inmediatamente tras su interpretación.
+</p>
+
+<h2>5. Procesamiento local</h2>
+<p>
+Toda la funcionalidad de Voice Clicker Pro opera de forma <strong>100% local</strong>. Esto significa:
+</p>
+<ul>
+    <li>No existen servidores remotos.</li>
+    <li>No se realizan conexiones externas.</li>
+    <li>No se envían datos a la nube.</li>
+    <li>No se utilizan servicios de terceros que impliquen transferencia de datos.</li>
+</ul>
+<p>
+Este enfoque garantiza que el usuario mantiene el control total sobre su información y que no se produce ningún tratamiento de datos personales más allá del estrictamente necesario para el funcionamiento inmediato de la Aplicación.
+</p>
+
+<h2>6. Uso de red (LAN)</h2>
+<p>
+La Aplicación puede, opcionalmente, comunicarse con otros dispositivos dentro de la <strong>red local (LAN)</strong> del usuario para funciones de control remoto. Esta comunicación:
+</p>
+<ul>
+    <li>No sale de la red local.</li>
+    <li>No implica transmisión de datos personales.</li>
+    <li>Se limita a comandos técnicos necesarios para la automatización.</li>
+</ul>
+
+<h2>7. Base legal del tratamiento (GDPR – Art. 6)</h2>
+<p>
+Dado que la Aplicación no recopila datos personales, la base legal aplicable se limita al tratamiento estrictamente necesario para:
+</p>
+<ul>
+    <li><strong>Art. 6.1.b GDPR – Ejecución de un contrato</strong>: el procesamiento de audio en tiempo real es necesario para proporcionar la funcionalidad solicitada por el usuario.</li>
+    <li><strong>Art. 6.1.f GDPR – Interés legítimo</strong>: garantizar el funcionamiento seguro y eficiente de la Aplicación.</li>
+</ul>
+
+<h2>8. Conservación de datos</h2>
+<p>
+Voice Clicker Pro no conserva ningún dato personal. El audio procesado se elimina inmediatamente tras su análisis en memoria. No existen registros, logs, historiales ni bases de datos asociadas al usuario.
+</p>
+
+<h2>9. Seguridad</h2>
+<p>
+Aunque no se almacenan datos, la Aplicación implementa medidas de seguridad para proteger el entorno de ejecución:
+</p>
+<ul>
+    <li>Procesamiento local sin transmisión externa.</li>
+    <li>Uso de librerías offline verificadas.</li>
+    <li>Ausencia de telemetría o canales de salida.</li>
+    <li>Restricción de permisos al mínimo necesario.</li>
+</ul>
+
+<h2>10. Transferencias internacionales</h2>
+<p>
+No se realizan transferencias internacionales de datos, ya que la Aplicación no transmite información fuera del dispositivo del usuario.
+</p>
+
+<h2>11. Servicios de terceros</h2>
+<p>
+La Aplicación utiliza la librería <strong>Vosk</strong> para reconocimiento de voz offline. Esta librería:
+</p>
+<ul>
+    <li>Opera completamente en local.</li>
+    <li>No envía datos a servidores externos.</li>
+    <li>No recopila información del usuario.</li>
+</ul>
+
+<h2>12. Derechos del usuario</h2>
+<p>
+Aunque la Aplicación no procesa datos personales, el usuario conserva los derechos reconocidos por el GDPR:
+</p>
+<ul>
+    <li>Acceso</li>
+    <li>Rectificación</li>
+    <li>Supresión</li>
+    <li>Limitación del tratamiento</li>
+    <li>Oposición</li>
+    <li>Portabilidad</li>
+</ul>
+<p>
+En la práctica, estos derechos no requieren ejercicio, ya que no existe información personal que gestionar.
+</p>
+
+<h2>13. Derecho a presentar una reclamación</h2>
+<p>
+El usuario puede presentar una reclamación ante la autoridad de control competente en materia de protección de datos de su país de residencia dentro de la Unión Europea.
+</p>
+
+<h2>14. Cambios en esta política</h2>
+<p>
+Voice Clicker Pro podrá actualizar esta Política de Privacidad para reflejar mejoras técnicas, cambios regulatorios o nuevas funcionalidades. La versión vigente estará siempre disponible en el sitio oficial.
+</p>
+
+<h2>15. Contacto</h2>
+<p>
+Para cualquier consulta relacionada con esta Política de Privacidad, puede contactar con nosotros en:<br>
+<strong>Email:</strong> <a href="mailto:support@voiceclickerpro.com">support@voiceclickerpro.com</a>
+</p>
+
+</div>
+
+<!-- ========================================================= -->
+<!-- ======================== ENGLISH ========================= -->
+<!-- ========================================================= -->
+
+<div data-lang="en">
+
+<h2>1. Introduction</h2>
+<p>
+This Privacy Policy governs the processing of personal data performed by the desktop application <strong>Voice Clicker Pro</strong> (“the Application”), designed for Windows systems and intended for voice‑based computer control and keyboard/mouse automation.
+</p>
+<p>
+This document complies with the <strong>General Data Protection Regulation (EU) 2016/679</strong> (“GDPR”) and with the privacy requirements established by <strong>Microsoft Store</strong>.
+</p>
+<p>
+Voice Clicker Pro has been developed following a <strong>privacy‑by‑design and privacy‑by‑default</strong> approach, ensuring that all processing occurs locally on the user’s device, with no transmission of data to external servers.
+</p>
+
+<h2>2. Data Controller</h2>
+<p>
+The data controller (when applicable) is:
+</p>
+<p>
+<strong>Voice Clicker Pro – Legal Department</strong><br>
+Contact email: <a href="mailto:support@voiceclickerpro.com">support@voiceclickerpro.com</a><br>
+Reference year: 2026
+</p>
+
+<h2>3. Data Collected</h2>
+<p>
+Voice Clicker Pro is designed to <strong>not collect, store, or transmit any personal data</strong>. This includes:
+</p>
+<ul>
+    <li>No names, addresses, emails, or identifiers.</li>
+    <li>No user accounts or profiles.</li>
+    <li>No voice commands are recorded.</li>
+    <li>No audio is stored.</li>
+    <li>No usage analytics or telemetry.</li>
+</ul>
+<p>
+This absence of data collection is a deliberate technical and legal decision aligned with the GDPR principle of <strong>data minimization</strong> (Art. 5.1.c).
+</p>
+
+<h2>4. Microphone Usage</h2>
+<p>
+The Application requires access to the <strong>microphone</strong> to process voice commands. This access is used exclusively to:
+</p>
+<ul>
+    <li>Capture real‑time audio.</li>
+    <li>Process audio locally using the offline Vosk engine.</li>
+    <li>Interpret commands for system automation.</li>
+</ul>
+<p>
+Captured audio:
+</p>
+<ul>
+    <li>Is not sent to the Internet.</li>
+    <li>Is not transmitted to third parties.</li>
+    <li>Is not stored on the device.</li>
+    <li>Is not used to train models.</li>
+</ul>
+<p>
+Processing is ephemeral: audio is analyzed in memory and immediately discarded.
+</p>
+
+<h2>5. Local Processing</h2>
+<p>
+All functionality operates <strong>100% locally</strong>. This means:
+</p>
+<ul>
+    <li>No remote servers.</li>
+    <li>No external connections.</li>
+    <li>No cloud transmission.</li>
+    <li>No third‑party services involving data transfer.</li>
+</ul>
+
+<h2>6. Network Usage (LAN)</h2>
+<p>
+The Application may optionally communicate with other devices within the user’s <strong>local network (LAN)</strong> for remote‑control features. Such communication:
+</p>
+<ul>
+    <li>Never leaves the local network.</li>
+    <li>Does not involve personal data.</li>
+    <li>Is limited to technical automation commands.</li>
+</ul>
+
+<h2>7. Legal Basis (GDPR – Art. 6)</h2>
+<p>
+Since the Application does not collect personal data, the applicable legal bases relate solely to the processing required to provide functionality:
+</p>
+<ul>
+    <li><strong>Art. 6.1.b – Performance of a contract</strong>: real‑time audio processing is necessary to deliver the requested features.</li>
+    <li><strong>Art. 6.1.f – Legitimate interest</strong>: ensuring secure and efficient operation of the Application.</li>
+</ul>
+
+<h2>8. Data Retention</h2>
+<p>
+Voice Clicker Pro does not retain any personal data. Audio is processed in memory and discarded immediately. No logs, histories, or databases are created.
+</p>
+
+<h2>9. Security</h2>
+<p>
+Although no data is stored, the Application implements security measures such as:
+</p>
+<ul>
+    <li>Local‑only processing.</li>
+    <li>Verified offline libraries.</li>
+    <li>No telemetry or outbound channels.</li>
+    <li>Minimal permission usage.</li>
+</ul>
+
+<h2>10. International Transfers</h2>
+<p>
+No international data transfers occur, as no information leaves the user’s device.
+</p>
+
+<h2>11. Third‑Party Services</h2>
+<p>
+The Application uses the <strong>Vosk</strong> offline speech recognition library. This library:
+</p>
+<ul>
+    <li>Operates entirely locally.</li>
+    <li>Does not send data externally.</li>
+    <li>Does not collect user information.</li>
+</ul>
+
+<h2>12. User Rights</h2>
+<p>
+Users retain all GDPR rights, including:
+</p>
+<ul>
+    <li>Access</li>
+    <li>Rectification</li>
+    <li>Erasure</li>
+    <li>Restriction</li>
+    <li>Objection</li>
+    <li>Portability</li>
+</ul>
+<p>
+In practice, these rights do not require exercise because no personal data is processed.
+</p>
+
+<h2>13. Right to Lodge a Complaint</h2>
+<p>
+Users may lodge a complaint with their national data protection authority within the European Union.
+</p>
+
+<h2>14. Changes to This Policy</h2>
+<p>
+Voice Clicker Pro may update this Privacy Policy to reflect technical improvements, regulatory changes, or new features. The current version will always be available on the official website.
+</p>
+
+<h2>15. Contact</h2>
+<p>
+For any privacy‑related inquiries, please contact:<br>
+<strong>Email:</strong> <a href="mailto:support@voiceclickerpro.com">support@voiceclickerpro.com</a>
+</p>
+
+</div>
+
+</div>
 
 </body>
 </html>
