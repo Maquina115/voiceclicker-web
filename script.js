@@ -609,6 +609,70 @@ const langAttrs = {
   zh: 'zh-Hans', pt: 'pt', ko: 'ko', ja: 'ja',
 };
 
+const OFFER_END = new Date('2026-05-18T23:59:59');
+const NOW = new Date();
+
+const isOfferActive = NOW <= OFFER_END;
+
+const priceData = isOfferActive
+  ? {
+      current: '4,99',
+      original: '9,99',
+      discount: '-50%',
+      showDiscount: true
+    }
+  : {
+      current: '9,99',
+      original: null,
+      discount: null,
+      showDiscount: false
+    };
+
+
+function initPricing() {
+  const currentEl  = document.getElementById('price-current');
+  const originalEl = document.getElementById('price-original');
+  const badgeEl    = document.getElementById('price-badge');
+  const untilEl    = document.getElementById('price-until');
+  const discountWrap = document.getElementById('price-discount');
+
+  if (!currentEl) return;
+
+  const OFFER_END = new Date('2026-05-18T23:59:59');
+  const NOW = new Date();
+  const isOfferActive = NOW <= OFFER_END;
+
+  if (isOfferActive) {
+    currentEl.innerHTML = '4<span class="pricing__decimal">,99</span>';
+    originalEl.textContent = '9,99€';
+    badgeEl.textContent = '-50%';
+    untilEl.textContent = 'Oferta hasta el 18/05/2026';
+
+    discountWrap.style.display = 'flex';
+  } else {
+    currentEl.innerHTML = '9<span class="pricing__decimal">,99</span>';
+    discountWrap.style.display = 'none';
+    untilEl.textContent = '';
+  }
+}
+
+
+function updateStructuredData() {
+  const offer = document.querySelector('script[type="application/ld+json"]');
+  if (!offer) return;
+
+  const data = JSON.parse(offer.textContent);
+
+  const OFFER_END = new Date('2026-05-18T23:59:59');
+  const NOW = new Date();
+  const isOfferActive = NOW <= OFFER_END;
+
+  data.offers.price = isOfferActive ? "4.99" : "9.99";
+
+  offer.textContent = JSON.stringify(data, null, 2);
+}
+
+
 /* ═══════════════════════════════════════════════════════════════
    2. I18N ENGINE
    ═══════════════════════════════════════════════════════════════ */
@@ -904,4 +968,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initFaq();
   initScrollReveal();
   initSmoothScroll();
+  initPricing();
+  updateStructuredData(); 
 });
