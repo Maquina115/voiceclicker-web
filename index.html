@@ -1,217 +1,614 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" dir="ltr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Voice Clicker Pro - Automatización por voz offline y control total del PC</title>
-  <meta name="description" content="Automatiza tu PC con comandos de voz offline. Crea macros, controla clics, teclado y flujos complejos sin depender de la nube. Voice Clicker Pro es rápido, privado y totalmente personalizable.">
-  <meta name="keywords" content="automatización por voz, control por voz PC, macros por voz, automatizar clics, automatizar teclado, reconocimiento de voz offline, productividad Windows, accesibilidad PC, control total PC">
-  <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://tu-dominio.com/voice-clicker-pro">
+  <!-- SEO Primary -->
+  <title data-i18n="meta_title">Voice Clicker Pro — Control por Voz para Windows | Automatización con Comandos de Voz</title>
+  <meta name="description" data-i18n="meta_description" content="Voice Clicker Pro automatiza clics de ratón, teclas y texto con tu voz en Windows. Control remoto por Wi-Fi, 8 idiomas, sin cloud. Disponible en Microsoft Store." />
+  <meta name="keywords" content="voice clicker, control por voz, automatización windows, clicker voz, voice automation, voice commands windows, automatizar teclado ratón, voice recognition windows" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Voice Clicker Pro" />
+  <link rel="canonical" href="https://voiceclickerpro.app/" />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Voice Clicker Pro - Automatización por voz offline para tu PC">
-  <meta property="og:description" content="Crea comandos de voz personalizados para automatizar tu PC sin conexión. Control total, máxima privacidad.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://tu-dominio.com/voice-clicker-pro">
-  <meta property="og:image" content="img/placeholder-hero.png">
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://voiceclickerpro.app/" />
+  <meta property="og:title" data-i18n="meta_og_title" content="Voice Clicker Pro — Automatización por Voz para Windows" />
+  <meta property="og:description" data-i18n="meta_og_description" content="Controla tu PC con la voz. Automatiza clics, atajos de teclado y texto con comandos personalizados. Control remoto desde el móvil incluido." />
+  <meta property="og:image" content="img/og-image.png" />
+  <meta property="og:locale" content="es_ES" />
 
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Voice Clicker Pro - Control total del PC por voz">
-  <meta name="twitter:description" content="Automatiza clics, teclado y flujos complejos con comandos de voz offline.">
-  <meta name="twitter:image" content="img/placeholder-hero.png">
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" data-i18n="meta_twitter_title" content="Voice Clicker Pro — Control por Voz para Windows" />
+  <meta name="twitter:description" data-i18n="meta_twitter_description" content="Automatiza tu PC con comandos de voz. Sin cloud, sin suscripción. Descárgalo en Microsoft Store." />
+  <meta name="twitter:image" content="img/og-image.png" />
 
-  <link rel="stylesheet" href="styles.css">
-</head>
-
-<body>
-<header class="header">
-  <nav class="nav container">
-    <div class="nav__logo">VoiceClicker</div>
-
-    <ul class="nav__menu">
-      <li><a href="#features" data-i18n="nav_features"></a></li>
-      <li><a href="#how" data-i18n="nav_how"></a></li>
-      <li><a href="#usecases" data-i18n="nav_usecases"></a></li>
-      <li><a href="#pricing" data-i18n="nav_pricing"></a></li>
-    </ul>
-
-    <select id="lang-switcher" aria-label="Language selector">
-      <option value="es">ES</option>
-      <option value="en">EN</option>
-      <option value="de">DE</option>
-      <option value="tr">TR</option>
-      <option value="zh">ZH</option>
-      <option value="pt">PT</option>
-      <option value="ko">KO</option>
-      <option value="ja">JA</option>
-    </select>
-  </nav>
-</header>
-
-<main>
-
-<section class="hero container">
-  <div class="hero__content">
-    <h1 data-i18n="hero_title"></h1>
-    <p class="hero__subtitle" data-i18n="hero_sub"></p>
-
-    <ul class="hero__bullets">
-      <li data-i18n="hero_bullet1"></li>
-      <li data-i18n="hero_bullet2"></li>
-      <li data-i18n="hero_bullet3"></li>
-    </ul>
-
-    <a href="https://apps.microsoft.com/detail/mi-app-id" class="btn btn--primary" data-i18n="cta_main"></a>
-
-    <p class="hero__note" data-i18n="hero_note"></p>
-  </div>
-
-  <div class="hero__image">
-    <!-- Aquí va mockup principal de la app -->
-    <img src="img/placeholder-hero.png" alt="Interfaz de Voice Clicker Pro mostrando comandos de voz y automatizaciones">
-  </div>
-</section>
-
-<section id="how" class="section container">
-  <h2 data-i18n="how_title"></h2>
-
-  <div class="steps">
-    <article>
-      <h3 data-i18n="step1_title"></h3>
-      <p data-i18n="step1_desc"></p>
-    </article>
-    <article>
-      <h3 data-i18n="step2_title"></h3>
-      <p data-i18n="step2_desc"></p>
-    </article>
-    <article>
-      <h3 data-i18n="step3_title"></h3>
-      <p data-i18n="step3_desc"></p>
-    </article>
-  </div>
-</section>
-
-<section id="features" class="section container">
-  <h2 data-i18n="features_title"></h2>
-
-  <div class="features">
-    <article>
-      <h3 data-i18n="feat1_title"></h3>
-      <p data-i18n="feat1_desc"></p>
-    </article>
-    <article>
-      <h3 data-i18n="feat2_title"></h3>
-      <p data-i18n="feat2_desc"></p>
-    </article>
-    <article>
-      <h3 data-i18n="feat3_title"></h3>
-      <p data-i18n="feat3_desc"></p>
-    </article>
-    <article>
-      <h3 data-i18n="feat4_title"></h3>
-      <p data-i18n="feat4_desc"></p>
-    </article>
-  </div>
-</section>
-
-<section id="usecases" class="section container">
-  <h2 data-i18n="usecases_title"></h2>
-
-  <div class="usecases">
-    <article>
-      <h3 data-i18n="usecase_streamers_title"></h3>
-      <p data-i18n="usecase_streamers_desc"></p>
-    </article>
-    <article>
-      <h3 data-i18n="usecase_productivity_title"></h3>
-      <p data-i18n="usecase_productivity_desc"></p>
-    </article>
-    <article>
-      <h3 data-i18n="usecase_accessibility_title"></h3>
-      <p data-i18n="usecase_accessibility_desc"></p>
-    </article>
-  </div>
-</section>
-
-<section class="section container">
-  <h2 data-i18n="screens_title"></h2>
-
-  <figure>
-    <img src="img/placeholder-screenshot-1.png" alt="Pantalla principal con lista de comandos de voz">
-    <figcaption data-i18n="screen1"></figcaption>
-  </figure>
-
-  <figure>
-    <img src="img/placeholder-screenshot-2.png" alt="Pantalla de configuración avanzada de automatizaciones">
-    <figcaption data-i18n="screen2"></figcaption>
-  </figure>
-</section>
-
-<section class="section container">
-  <h2 data-i18n="video_title"></h2>
-  <!-- Aquí va un video demostrativo de la app mostrando automatizaciones reales -->
-</section>
-
-<section class="section container">
-  <h2 data-i18n="faq_title"></h2>
-
-  <details>
-    <summary data-i18n="faq1_q"></summary>
-    <p data-i18n="faq1_a"></p>
-  </details>
-
-  <details>
-    <summary data-i18n="faq2_q"></summary>
-    <p data-i18n="faq2_a"></p>
-  </details>
-
-  <details>
-    <summary data-i18n="faq3_q"></summary>
-    <p data-i18n="faq3_a"></p>
-  </details>
-</section>
-
-<section id="pricing" class="section container pricing">
-  <h2 data-i18n="pricing_title"></h2>
-  <p data-i18n="pricing_desc"></p>
-
-  <a href="https://apps.microsoft.com/detail/mi-app-id" class="btn btn--primary" data-i18n="cta_buy"></a>
-  <p class="pricing__note" data-i18n="pricing_note"></p>
-</section>
-
-</main>
-
-<footer class="footer container">
-  <p>© 2026 VoiceClicker</p>
-  <!-- Enlaces legales placeholder -->
-  <!-- <a href="#">Política de privacidad</a> · <a href="#">Términos de uso</a> -->
-</footer>
-
-<script src="script.js"></script>
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  "name": "Voice Clicker Pro",
-  "applicationCategory": "ProductivityApplication",
-  "operatingSystem": "Windows",
-  "description": "Aplicación de automatización por voz offline para controlar clics, teclado y flujos personalizados en Windows.",
-  "offers": {
-    "@type": "Offer",
-    "price": "9.99",
-    "priceCurrency": "EUR",
-    "url": "https://apps.microsoft.com/detail/mi-app-id"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "VoiceClicker"
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "SoftwareApplication",
+        "name": "Voice Clicker Pro",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Windows 10, Windows 11",
+        "description": "Desktop application for Windows that automates mouse clicks, keyboard shortcuts, and text input using voice commands. Includes Wi-Fi remote control, 8-language support, and offline voice recognition via Vosk.",
+        "offers": {
+          "@type": "Offer",
+          "price": "4.99",
+          "priceCurrency": "EUR",
+          "availability": "https://schema.org/InStock",
+          "url": "https://apps.microsoft.com/detail/voice-clicker-pro-id"
+        },
+        "softwareVersion": "1.0",
+        "downloadUrl": "https://apps.microsoft.com/detail/voice-clicker-pro-id",
+        "inLanguage": ["es", "en", "de", "tr", "zh", "pt", "ko", "ja"],
+        "featureList": [
+          "Voice-triggered mouse click automation",
+          "Keyboard shortcut automation via voice",
+          "Text input via voice commands",
+          "Wi-Fi remote control from mobile browser",
+          "Offline voice recognition (no cloud required)",
+          "Multi-step actions with configurable delays",
+          "8-language interface support"
+        ]
+      },
+      {
+        "@type": "Product",
+        "name": "Voice Clicker Pro",
+        "description": "Control your PC with your voice. Automate clicks, keyboard shortcuts and text input with custom voice commands on Windows.",
+        "brand": {
+          "@type": "Brand",
+          "name": "Voice Clicker Pro"
+        },
+        "offers": {
+          "@type": "Offer",
+          "price": "4.99",
+          "priceCurrency": "EUR",
+          "availability": "https://schema.org/InStock"
+        }
+      },
+      {
+        "@type": "Organization",
+        "name": "Voice Clicker Pro",
+        "url": "https://voiceclickerpro.app/",
+        "logo": "https://voiceclickerpro.app/img/logo.png",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "contactType": "customer support",
+          "email": "support@voiceclickerpro.app"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Does Voice Clicker Pro require an internet connection?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. Voice recognition runs entirely offline using the Vosk engine. No data is sent to any server."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What Windows versions are supported?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Voice Clicker Pro supports Windows 10 and Windows 11 (64-bit)."
+            }
+          }
+        ]
+      }
+    ]
   }
-}
-</script>
+  </script>
 
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════ HEADER ═══════════════════════════ -->
+  <header class="header" role="banner">
+    <div class="header__inner container">
+      <a href="#hero" class="header__logo" aria-label="Voice Clicker Pro — Inicio">
+        <!-- Aquí va el logo -->
+        <span class="header__logo-icon" aria-hidden="true">🎙️</span>
+        <span class="header__logo-text">Voice Clicker Pro</span>
+      </a>
+
+      <button class="header__nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="mainNav">
+        <span class="header__hamburger"></span>
+        <span class="header__hamburger"></span>
+        <span class="header__hamburger"></span>
+      </button>
+
+      <nav class="header__nav" id="mainNav" role="navigation" aria-label="Navegación principal">
+        <ul class="header__nav-list">
+          <li><a href="#how-it-works" class="header__nav-link" data-i18n="nav_how">Cómo funciona</a></li>
+          <li><a href="#features" class="header__nav-link" data-i18n="nav_features">Características</a></li>
+          <li><a href="#screenshots" class="header__nav-link" data-i18n="nav_screenshots">Capturas</a></li>
+          <li><a href="#pricing" class="header__nav-link" data-i18n="nav_pricing">Precio</a></li>
+          <li><a href="#faq" class="header__nav-link" data-i18n="nav_faq">FAQ</a></li>
+        </ul>
+      </nav>
+
+      <div class="header__lang" role="navigation" aria-label="Selector de idioma">
+        <button class="header__lang-btn" id="langBtn" aria-haspopup="listbox" aria-expanded="false" aria-label="Idioma actual: Español">
+          <span id="langBtnLabel">ES</span>
+          <svg class="header__lang-caret" aria-hidden="true" viewBox="0 0 10 6" width="10" height="6">
+            <path d="M0 0l5 6 5-6z" fill="currentColor"/>
+          </svg>
+        </button>
+        <ul class="header__lang-dropdown" id="langDropdown" role="listbox" aria-label="Idiomas disponibles">
+          <li role="option" data-lang="es" aria-selected="true">🇪🇸 Español</li>
+          <li role="option" data-lang="en" aria-selected="false">🇬🇧 English</li>
+          <li role="option" data-lang="de" aria-selected="false">🇩🇪 Deutsch</li>
+          <li role="option" data-lang="tr" aria-selected="false">🇹🇷 Türkçe</li>
+          <li role="option" data-lang="zh" aria-selected="false">🇨🇳 中文</li>
+          <li role="option" data-lang="pt" aria-selected="false">🇧🇷 Português</li>
+          <li role="option" data-lang="ko" aria-selected="false">🇰🇷 한국어</li>
+          <li role="option" data-lang="ja" aria-selected="false">🇯🇵 日本語</li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- ═══════════════════════════ HERO ═══════════════════════════ -->
+    <section class="hero" id="hero" aria-labelledby="heroHeading">
+      <div class="hero__bg" aria-hidden="true">
+        <div class="hero__bg-orb hero__bg-orb--1"></div>
+        <div class="hero__bg-orb hero__bg-orb--2"></div>
+        <div class="hero__bg-grid"></div>
+      </div>
+      <div class="hero__inner container">
+        <div class="hero__content">
+          <div class="hero__badge" data-i18n="hero_badge">✦ Para Windows 10 &amp; 11</div>
+          <h1 class="hero__title" id="heroHeading">
+            <span class="hero__title-line" data-i18n="hero_title_1">Controla tu PC</span>
+            <span class="hero__title-accent" data-i18n="hero_title_2">con tu voz.</span>
+          </h1>
+          <p class="hero__subtitle" data-i18n="hero_subtitle">
+            Voice Clicker Pro automatiza clics, atajos de teclado y texto con comandos de voz personalizados. Sin cloud, sin suscripción. 100% offline.
+          </p>
+          <div class="hero__cta-group">
+            <a href="https://apps.microsoft.com/detail/voice-clicker-pro-id" class="btn btn--primary btn--large hero__cta" rel="noopener noreferrer" target="_blank" data-i18n="hero_cta_buy">
+              <svg aria-hidden="true" viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M3 3h8v8H3V3zm10 0h8v8h-8V3zM3 13h8v8H3v-8zm10 3.5a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0z"/></svg>
+              Comprar en Microsoft Store
+            </a>
+            <a href="#how-it-works" class="btn btn--ghost hero__cta-secondary" data-i18n="hero_cta_learn">Ver cómo funciona</a>
+          </div>
+          <p class="hero__trust" data-i18n="hero_trust">
+            🔒 Sin conexión a internet · 🌍 8 idiomas · 🖥️ Windows 10/11
+          </p>
+        </div>
+        <div class="hero__mockup" aria-hidden="true">
+          <div class="hero__mockup-window">
+            <div class="hero__mockup-titlebar">
+              <span class="hero__mockup-dot hero__mockup-dot--red"></span>
+              <span class="hero__mockup-dot hero__mockup-dot--yellow"></span>
+              <span class="hero__mockup-dot hero__mockup-dot--green"></span>
+              <span class="hero__mockup-title">Voice Clicker Pro</span>
+            </div>
+            <!-- Aquí va mockup principal de la app -->
+            <div class="hero__mockup-body">
+              <div class="hero__mockup-sidebar">
+                <div class="hero__mockup-item hero__mockup-item--active">📌 Siguiente diapositiva</div>
+                <div class="hero__mockup-item">📌 Copiar selección</div>
+                <div class="hero__mockup-item">📌 Guardar archivo</div>
+                <div class="hero__mockup-item">📌 Abrir terminal</div>
+              </div>
+              <div class="hero__mockup-editor">
+                <div class="hero__mockup-field">
+                  <span class="hero__mockup-label">Triggers</span>
+                  <span class="hero__mockup-value">siguiente, avanzar, next</span>
+                </div>
+                <div class="hero__mockup-steps">
+                  <div class="hero__mockup-step">→ hotkey: <em>ctrl+right</em></div>
+                  <div class="hero__mockup-step">→ delay: <em>0.3s</em></div>
+                </div>
+                <div class="hero__mockup-mic">
+                  <span class="hero__mockup-mic-dot"></span>
+                  <span class="hero__mockup-mic-text">Escuchando…</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════ HOW IT WORKS ═══════════════════════════ -->
+    <section class="how" id="how-it-works" aria-labelledby="howHeading">
+      <div class="container">
+        <header class="section-header">
+          <p class="section-header__kicker" data-i18n="how_kicker">Flujo de uso</p>
+          <h2 class="section-header__title" id="howHeading" data-i18n="how_title">Tres pasos. Empieza en minutos.</h2>
+          <p class="section-header__desc" data-i18n="how_desc">Sin configuración compleja, sin drivers extra. Instala, define tus acciones y habla.</p>
+        </header>
+        <ol class="how__steps" aria-label="Pasos de uso de Voice Clicker Pro">
+          <li class="how__step">
+            <div class="how__step-num" aria-hidden="true">01</div>
+            <div class="how__step-icon" aria-hidden="true">⚡</div>
+            <h3 class="how__step-title" data-i18n="how_step1_title">Instala la app</h3>
+            <p class="how__step-desc" data-i18n="how_step1_desc">Descarga Voice Clicker Pro desde Microsoft Store. Se instala en segundos, sin dependencias externas ni permisos de administrador.</p>
+          </li>
+          <li class="how__step">
+            <div class="how__step-num" aria-hidden="true">02</div>
+            <div class="how__step-icon" aria-hidden="true">🛠️</div>
+            <h3 class="how__step-title" data-i18n="how_step2_title">Define tus acciones</h3>
+            <p class="how__step-desc" data-i18n="how_step2_desc">Crea acciones con triggers de voz personalizados. Cada acción puede encadenar clics, teclas, atajos y texto en el orden que quieras.</p>
+          </li>
+          <li class="how__step">
+            <div class="how__step-num" aria-hidden="true">03</div>
+            <div class="how__step-icon" aria-hidden="true">🎙️</div>
+            <h3 class="how__step-title" data-i18n="how_step3_title">Habla y automatiza</h3>
+            <p class="how__step-desc" data-i18n="how_step3_desc">Activa el micrófono y di el trigger. Voice Clicker Pro ejecuta la acción al instante, sin necesidad de internet ni de mantener el foco en la app.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════ FEATURES ═══════════════════════════ -->
+    <section class="features" id="features" aria-labelledby="featuresHeading">
+      <div class="container">
+        <header class="section-header">
+          <p class="section-header__kicker" data-i18n="feat_kicker">Funcionalidades</p>
+          <h2 class="section-header__title" id="featuresHeading" data-i18n="feat_title">Todo lo que necesitas para automatizar</h2>
+        </header>
+        <ul class="features__grid" aria-label="Características principales de Voice Clicker Pro">
+          <li class="feature-card">
+            <div class="feature-card__icon" aria-hidden="true">🖱️</div>
+            <h3 class="feature-card__title" data-i18n="feat1_title">Clics de ratón por voz</h3>
+            <p class="feature-card__desc" data-i18n="feat1_desc">Define coordenadas exactas capturando clics en pantalla. Botón izquierdo, derecho o central. Configura el número de clics por paso.</p>
+          </li>
+          <li class="feature-card">
+            <div class="feature-card__icon" aria-hidden="true">⌨️</div>
+            <h3 class="feature-card__title" data-i18n="feat2_title">Atajos de teclado</h3>
+            <p class="feature-card__desc" data-i18n="feat2_desc">Ejecuta cualquier combinación de teclas: <code>Ctrl+C</code>, <code>Alt+Tab</code>, <code>Ctrl+Shift+S</code>… Captura la combinación en tiempo real con un clic.</p>
+          </li>
+          <li class="feature-card">
+            <div class="feature-card__icon" aria-hidden="true">💬</div>
+            <h3 class="feature-card__title" data-i18n="feat3_title">Escritura automática de texto</h3>
+            <p class="feature-card__desc" data-i18n="feat3_desc">Escribe bloques de texto completos con un solo comando. Ideal para respuestas frecuentes, firmas de correo o formularios repetitivos.</p>
+          </li>
+          <li class="feature-card">
+            <div class="feature-card__icon" aria-hidden="true">📱</div>
+            <h3 class="feature-card__title" data-i18n="feat4_title">Control remoto por Wi-Fi</h3>
+            <p class="feature-card__desc" data-i18n="feat4_desc">Activa el servidor integrado y controla tus acciones desde el navegador de tu móvil. Sin apps extra. PIN de acceso configurable.</p>
+          </li>
+          <li class="feature-card">
+            <div class="feature-card__icon" aria-hidden="true">🔗</div>
+            <h3 class="feature-card__title" data-i18n="feat5_title">Pasos múltiples encadenados</h3>
+            <p class="feature-card__desc" data-i18n="feat5_desc">Combina clics, teclas, texto y hotkeys en una sola acción. Añade delays entre pasos para sincronizar con animaciones o tiempos de carga.</p>
+          </li>
+          <li class="feature-card">
+            <div class="feature-card__icon" aria-hidden="true">🌐</div>
+            <h3 class="feature-card__title" data-i18n="feat6_title">8 idiomas de interfaz</h3>
+            <p class="feature-card__desc" data-i18n="feat6_desc">Disponible en español, inglés, alemán, turco, chino, portugués, coreano y japonés. El idioma de reconocimiento de voz es independiente.</p>
+          </li>
+          <li class="feature-card">
+            <div class="feature-card__icon" aria-hidden="true">🔒</div>
+            <h3 class="feature-card__title" data-i18n="feat7_title">100% offline, sin cloud</h3>
+            <p class="feature-card__desc" data-i18n="feat7_desc">El reconocimiento de voz funciona localmente con el motor Vosk. Ningún audio sale de tu equipo. Privacidad total garantizada.</p>
+          </li>
+          <li class="feature-card">
+            <div class="feature-card__icon" aria-hidden="true">🔁</div>
+            <h3 class="feature-card__title" data-i18n="feat8_title">Cooldown y repetición</h3>
+            <p class="feature-card__desc" data-i18n="feat8_desc">Evita disparos accidentales con cooldown configurable en milisegundos. Repite una acción N veces con un solo comando de voz.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════ BENEFITS ═══════════════════════════ -->
+    <section class="benefits" id="benefits" aria-labelledby="benefitsHeading">
+      <div class="container">
+        <div class="benefits__inner">
+          <div class="benefits__content">
+            <p class="section-header__kicker" data-i18n="ben_kicker">Por qué elegirlo</p>
+            <h2 class="benefits__title" id="benefitsHeading" data-i18n="ben_title">Productividad real, sin compromiso de privacidad</h2>
+            <ul class="benefits__list">
+              <li class="benefits__item">
+                <span class="benefits__item-icon" aria-hidden="true">✓</span>
+                <div>
+                  <strong data-i18n="ben1_title">Sin suscripción, sin sorpresas</strong>
+                  <p data-i18n="ben1_desc">Pago único. Sin cuota mensual, sin caducidad de licencia, sin funciones bloqueadas.</p>
+                </div>
+              </li>
+              <li class="benefits__item">
+                <span class="benefits__item-icon" aria-hidden="true">✓</span>
+                <div>
+                  <strong data-i18n="ben2_title">Funciona con cualquier app de Windows</strong>
+                  <p data-i18n="ben2_desc">No es un plugin ni una extensión. Opera a nivel de sistema: funciona con cualquier software instalado.</p>
+                </div>
+              </li>
+              <li class="benefits__item">
+                <span class="benefits__item-icon" aria-hidden="true">✓</span>
+                <div>
+                  <strong data-i18n="ben3_title">Accesibilidad y ergonomía</strong>
+                  <p data-i18n="ben3_desc">Ideal para reducir el uso del ratón y teclado. Útil en movilidad reducida, lesiones de muñeca o trabajo con manos ocupadas.</p>
+                </div>
+              </li>
+              <li class="benefits__item">
+                <span class="benefits__item-icon" aria-hidden="true">✓</span>
+                <div>
+                  <strong data-i18n="ben4_title">Control remoto sin instalar nada en el móvil</strong>
+                  <p data-i18n="ben4_desc">El panel remoto corre en tu navegador del teléfono. Sin apps extra. Conexión local por Wi-Fi, segura y rápida.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="benefits__visual" aria-hidden="true">
+            <div class="benefits__stat-card">
+              <div class="benefits__stat-num">8</div>
+              <div class="benefits__stat-label" data-i18n="ben_stat_lang">Idiomas</div>
+            </div>
+            <div class="benefits__stat-card benefits__stat-card--accent">
+              <div class="benefits__stat-num">∞</div>
+              <div class="benefits__stat-label" data-i18n="ben_stat_actions">Acciones personalizadas</div>
+            </div>
+            <div class="benefits__stat-card">
+              <div class="benefits__stat-num">0</div>
+              <div class="benefits__stat-label" data-i18n="ben_stat_cloud">Datos enviados a la nube</div>
+            </div>
+            <div class="benefits__stat-card benefits__stat-card--accent">
+              <div class="benefits__stat-num">4</div>
+              <div class="benefits__stat-label" data-i18n="ben_stat_steps">Tipos de pasos</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════ SCREENSHOTS ═══════════════════════════ -->
+    <section class="screenshots" id="screenshots" aria-labelledby="screenshotsHeading">
+      <div class="container">
+        <header class="section-header">
+          <p class="section-header__kicker" data-i18n="screens_kicker">En imágenes</p>
+          <h2 class="section-header__title" id="screenshotsHeading" data-i18n="screens_title">Diseñado para claridad y velocidad</h2>
+        </header>
+        <div class="screenshots__gallery" role="list">
+          <figure class="screenshots__item" role="listitem">
+            <!-- Aquí va captura de pantalla de la pantalla principal (lista de acciones) -->
+            <div class="screenshots__placeholder" aria-label="Captura de pantalla: pantalla principal">
+              <span aria-hidden="true">🖥️</span>
+            </div>
+            <figcaption class="screenshots__caption" data-i18n="screen1_cap">Panel principal — lista de acciones de voz</figcaption>
+          </figure>
+          <figure class="screenshots__item" role="listitem">
+            <!-- Aquí va captura de pantalla del editor de pasos -->
+            <div class="screenshots__placeholder" aria-label="Captura de pantalla: editor de pasos">
+              <span aria-hidden="true">🛠️</span>
+            </div>
+            <figcaption class="screenshots__caption" data-i18n="screen2_cap">Editor de pasos — configura clics, teclas y texto</figcaption>
+          </figure>
+          <figure class="screenshots__item" role="listitem">
+            <!-- Aquí va captura de pantalla del panel remoto en móvil -->
+            <div class="screenshots__placeholder" aria-label="Captura de pantalla: panel de control remoto">
+              <span aria-hidden="true">📱</span>
+            </div>
+            <figcaption class="screenshots__caption" data-i18n="screen3_cap">Control remoto — panel web accesible desde el móvil</figcaption>
+          </figure>
+          <figure class="screenshots__item" role="listitem">
+            <!-- Aquí va captura de pantalla del panel de ajustes -->
+            <div class="screenshots__placeholder" aria-label="Captura de pantalla: ajustes de idioma y servidor">
+              <span aria-hidden="true">⚙️</span>
+            </div>
+            <figcaption class="screenshots__caption" data-i18n="screen4_cap">Ajustes — idioma, tema, puerto y PIN del servidor remoto</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════ VIDEO ═══════════════════════════ -->
+    <section class="video-section" id="video" aria-labelledby="videoHeading">
+      <div class="container">
+        <header class="section-header">
+          <p class="section-header__kicker" data-i18n="video_kicker">Demo</p>
+          <h2 class="section-header__title" id="videoHeading" data-i18n="video_title">Míralo en acción</h2>
+          <p class="section-header__desc" data-i18n="video_desc">Un minuto es suficiente para entender todo el potencial de Voice Clicker Pro.</p>
+        </header>
+        <div class="video-section__frame" role="img" aria-label="Vídeo demostrativo de Voice Clicker Pro">
+          <!-- Aquí va un video demostrativo de la app en uso -->
+          <div class="video-section__placeholder">
+            <div class="video-section__play" aria-hidden="true">▶</div>
+            <p data-i18n="video_placeholder">Vídeo demostrativo</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════ TESTIMONIALS ═══════════════════════════ -->
+    <section class="testimonials" id="testimonials" aria-labelledby="testimonialsHeading">
+      <div class="container">
+        <header class="section-header">
+          <p class="section-header__kicker" data-i18n="test_kicker">Testimonios</p>
+          <h2 class="section-header__title" id="testimonialsHeading" data-i18n="test_title">Lo que dicen los usuarios</h2>
+        </header>
+        <div class="testimonials__grid">
+          <article class="testimonial-card" aria-label="Testimonio de usuario">
+            <div class="testimonial-card__stars" aria-label="5 de 5 estrellas">★★★★★</div>
+            <blockquote class="testimonial-card__quote">
+              <p data-i18n="test1_quote">"Uso Voice Clicker Pro para presentaciones. Con 'siguiente' avanzo la diapositiva sin tocar el ratón. Increíble en reuniones con el portátil lejos."</p>
+            </blockquote>
+            <footer class="testimonial-card__author">
+              <div class="testimonial-card__avatar" aria-hidden="true">MR</div>
+              <div>
+                <cite class="testimonial-card__name">Marcos R.</cite>
+                <p class="testimonial-card__role" data-i18n="test1_role">Consultor de negocio</p>
+              </div>
+            </footer>
+          </article>
+          <article class="testimonial-card testimonial-card--featured" aria-label="Testimonio destacado">
+            <div class="testimonial-card__stars" aria-label="5 de 5 estrellas">★★★★★</div>
+            <blockquote class="testimonial-card__quote">
+              <p data-i18n="test2_quote">"Tengo una lesión de túnel carpiano y este programa me ha devuelto la productividad. Defino mis atajos una vez y los ejecuto con la voz. Lo recomiendo a cualquiera que trabaje mucho con el teclado."</p>
+            </blockquote>
+            <footer class="testimonial-card__author">
+              <div class="testimonial-card__avatar" aria-hidden="true">SL</div>
+              <div>
+                <cite class="testimonial-card__name">Sofía L.</cite>
+                <p class="testimonial-card__role" data-i18n="test2_role">Desarrolladora de software</p>
+              </div>
+            </footer>
+          </article>
+          <article class="testimonial-card" aria-label="Testimonio de usuario">
+            <div class="testimonial-card__stars" aria-label="5 de 5 estrellas">★★★★★</div>
+            <blockquote class="testimonial-card__quote">
+              <p data-i18n="test3_quote">"El control remoto desde el móvil es genial. Tengo el PC conectado a la tele y puedo lanzar acciones desde el sofá. Sin conexión a internet, todo local."</p>
+            </blockquote>
+            <footer class="testimonial-card__author">
+              <div class="testimonial-card__avatar" aria-hidden="true">JP</div>
+              <div>
+                <cite class="testimonial-card__name">Javier P.</cite>
+                <p class="testimonial-card__role" data-i18n="test3_role">Streamer y creador de contenido</p>
+              </div>
+            </footer>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════ FAQ ═══════════════════════════ -->
+    <section class="faq" id="faq" aria-labelledby="faqHeading">
+      <div class="container">
+        <header class="section-header">
+          <p class="section-header__kicker" data-i18n="faq_kicker">Preguntas frecuentes</p>
+          <h2 class="section-header__title" id="faqHeading" data-i18n="faq_title">Todo lo que necesitas saber</h2>
+        </header>
+        <dl class="faq__list">
+          <div class="faq__item">
+            <dt class="faq__question">
+              <button class="faq__toggle" aria-expanded="false" aria-controls="faq1-answer" data-i18n="faq1_q">
+                ¿Necesita conexión a internet?
+                <span class="faq__toggle-icon" aria-hidden="true">+</span>
+              </button>
+            </dt>
+            <dd class="faq__answer" id="faq1-answer" hidden>
+              <p data-i18n="faq1_a">No. Voice Clicker Pro funciona completamente offline. El reconocimiento de voz usa el motor Vosk, que se ejecuta localmente en tu PC. Ningún audio ni dato personal se envía a ningún servidor.</p>
+            </dd>
+          </div>
+          <div class="faq__item">
+            <dt class="faq__question">
+              <button class="faq__toggle" aria-expanded="false" aria-controls="faq2-answer" data-i18n="faq2_q">
+                ¿Qué versiones de Windows son compatibles?
+                <span class="faq__toggle-icon" aria-hidden="true">+</span>
+              </button>
+            </dt>
+            <dd class="faq__answer" id="faq2-answer" hidden>
+              <p data-i18n="faq2_a">Voice Clicker Pro es compatible con Windows 10 y Windows 11 en arquitectura 64 bits. No es compatible con macOS ni Linux en esta versión.</p>
+            </dd>
+          </div>
+          <div class="faq__item">
+            <dt class="faq__question">
+              <button class="faq__toggle" aria-expanded="false" aria-controls="faq3-answer" data-i18n="faq3_q">
+                ¿En qué idioma reconoce la voz?
+                <span class="faq__toggle-icon" aria-hidden="true">+</span>
+              </button>
+            </dt>
+            <dd class="faq__answer" id="faq3-answer" hidden>
+              <p data-i18n="faq3_a">La versión actual incluye el modelo de reconocimiento de voz en español. Los idiomas de la interfaz (ES, EN, DE, TR, ZH, PT, KO, JA) son independientes del motor de voz.</p>
+            </dd>
+          </div>
+          <div class="faq__item">
+            <dt class="faq__question">
+              <button class="faq__toggle" aria-expanded="false" aria-controls="faq4-answer" data-i18n="faq4_q">
+                ¿Es un pago único o tiene suscripción?
+                <span class="faq__toggle-icon" aria-hidden="true">+</span>
+              </button>
+            </dt>
+            <dd class="faq__answer" id="faq4-answer" hidden>
+              <p data-i18n="faq4_a">Pago único en Microsoft Store. No hay cuota mensual, no hay funciones premium bloqueadas, no hay anuncios. Lo compras una vez y es tuyo para siempre, incluyendo actualizaciones de mantenimiento.</p>
+            </dd>
+          </div>
+          <div class="faq__item">
+            <dt class="faq__question">
+              <button class="faq__toggle" aria-expanded="false" aria-controls="faq5-answer" data-i18n="faq5_q">
+                ¿Cómo funciona el control remoto por Wi-Fi?
+                <span class="faq__toggle-icon" aria-hidden="true">+</span>
+              </button>
+            </dt>
+            <dd class="faq__answer" id="faq5-answer" hidden>
+              <p data-i18n="faq5_a">Desde la app, activa el servidor remoto (puerto configurable, por defecto 8765). La app mostrará la URL local de tu red Wi-Fi. Ábrela en el navegador de tu móvil, introduce el PIN y tendrás acceso a todas tus acciones.</p>
+            </dd>
+          </div>
+          <div class="faq__item">
+            <dt class="faq__question">
+              <button class="faq__toggle" aria-expanded="false" aria-controls="faq6-answer" data-i18n="faq6_q">
+                ¿Puedo usar Voice Clicker Pro para accesibilidad?
+                <span class="faq__toggle-icon" aria-hidden="true">+</span>
+              </button>
+            </dt>
+            <dd class="faq__answer" id="faq6-answer" hidden>
+              <p data-i18n="faq6_a">Sí, es uno de sus usos principales. Si tienes movilidad reducida en manos o brazos, o sufres lesiones como el síndrome del túnel carpiano, Voice Clicker Pro puede reducir drásticamente el uso físico del ratón y teclado.</p>
+            </dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════ PRICING ═══════════════════════════ -->
+    <section class="pricing" id="pricing" aria-labelledby="pricingHeading">
+      <div class="container">
+        <header class="section-header">
+          <p class="section-header__kicker" data-i18n="price_kicker">Precio</p>
+          <h2 class="section-header__title" id="pricingHeading" data-i18n="price_title">Simple. Sin sorpresas.</h2>
+        </header>
+        <div class="pricing__card" role="region" aria-label="Plan de compra de Voice Clicker Pro">
+          <div class="pricing__badge" data-i18n="price_badge">Pago único</div>
+          <div class="pricing__amount">
+            <span class="pricing__currency">€</span>
+            <span class="pricing__number">4<span class="pricing__decimal">,99</span></span>
+          </div>
+          <p class="pricing__desc" data-i18n="price_desc">Todo incluido. Sin suscripciones. Sin límites de uso.</p>
+          <ul class="pricing__features" aria-label="Qué incluye">
+            <li data-i18n="price_f1">✓ Acciones de voz ilimitadas</li>
+            <li data-i18n="price_f2">✓ Control remoto Wi-Fi incluido</li>
+            <li data-i18n="price_f3">✓ 8 idiomas de interfaz</li>
+            <li data-i18n="price_f4">✓ Actualizaciones de mantenimiento</li>
+            <li data-i18n="price_f5">✓ Reconocimiento de voz offline</li>
+            <li data-i18n="price_f6">✓ Soporte por email</li>
+          </ul>
+          <a href="https://apps.microsoft.com/detail/voice-clicker-pro-id" class="btn btn--primary btn--large pricing__cta" rel="noopener noreferrer" target="_blank" data-i18n="price_cta">
+            <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M3 3h8v8H3V3zm10 0h8v8h-8V3zM3 13h8v8H3v-8zm10 3.5a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0z"/></svg>
+            Comprar en Microsoft Store
+          </a>
+          <p class="pricing__trust" data-i18n="price_trust">🔐 Transacción segura a través de Microsoft · Soporte garantizado</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══════════════════════════ FOOTER ═══════════════════════════ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <span class="footer__logo" aria-label="Voice Clicker Pro">🎙️ Voice Clicker Pro</span>
+          <p class="footer__tagline" data-i18n="footer_tagline">Automatización por voz para Windows.</p>
+        </div>
+        <nav class="footer__nav" aria-label="Navegación del pie de página">
+          <ul class="footer__nav-list">
+            <li><a href="privacy.html" class="footer__nav-link" data-i18n="footer_privacy">Política de privacidad</a></li>
+            <li><a href="terms.html" class="footer__nav-link" data-i18n="footer_terms">Términos y condiciones</a></li>
+            <li><a href="mailto:support@voiceclickerpro.app" class="footer__nav-link" data-i18n="footer_support">Soporte</a></li>
+          </ul>
+        </nav>
+      </div>
+      <p class="footer__copy">
+        <span data-i18n="footer_copy">© 2025 Voice Clicker Pro. Todos los derechos reservados.</span>
+      </p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
