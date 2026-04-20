@@ -20,7 +20,7 @@ const translations = {
     meta_twitter_description: 'Automatiza tu PC con comandos de voz. Sin cloud, sin suscripción. Descárgalo en Microsoft Store.',
     nav_how:             'Cómo funciona',
     nav_features:        'Características',
-    nav_screenshots:     'Capturas',
+    nav_screenshots:     'Video Explicativo',
     nav_pricing:         'Precio',
     nav_faq:             'FAQ',
     hero_badge:          '✦ Para Windows 10 & 11',
@@ -131,7 +131,7 @@ const translations = {
     meta_twitter_description: 'Automate your PC with voice commands. No cloud, no subscription. Download on Microsoft Store.',
     nav_how:             'How it works',
     nav_features:        'Features',
-    nav_screenshots:     'Screenshots',
+    nav_screenshots:     'Explainer Video',
     nav_pricing:         'Pricing',
     nav_faq:             'FAQ',
     hero_badge:          '✦ For Windows 10 & 11',
@@ -234,7 +234,7 @@ const translations = {
   },
 
   de: {
-    nav_how: 'Funktionsweise', nav_features: 'Funktionen', nav_screenshots: 'Screenshots',
+    nav_how: 'Funktionsweise', nav_features: 'Funktionen', nav_screenshots: 'Erklärungsvideo',
     nav_pricing: 'Preis', nav_faq: 'FAQ',
     hero_badge: '✦ Für Windows 10 & 11',
     hero_title_1: 'Steuere deinen PC', hero_title_2: 'mit deiner Stimme.',
@@ -297,7 +297,7 @@ const translations = {
   },
 
   tr: {
-    nav_how: 'Nasıl Çalışır', nav_features: 'Özellikler', nav_screenshots: 'Ekran Görüntüleri',
+    nav_how: 'Nasıl Çalışır', nav_features: 'Özellikler', nav_screenshots: 'Açıklayıcı Video',
     nav_pricing: 'Fiyat', nav_faq: 'SSS',
     hero_badge: '✦ Windows 10 & 11 için',
     hero_title_1: 'PC\'ni kontrol et', hero_title_2: 'sesinle.',
@@ -357,7 +357,7 @@ const translations = {
   },
 
   zh: {
-    nav_how: '使用方式', nav_features: '功能', nav_screenshots: '截图',
+    nav_how: '使用方式', nav_features: '功能', nav_screenshots: '讲解视频',
     nav_pricing: '价格', nav_faq: '常见问题',
     hero_badge: '✦ 适用于 Windows 10 & 11',
     hero_title_1: '用您的声音', hero_title_2: '控制您的PC。',
@@ -417,7 +417,7 @@ const translations = {
   },
 
   pt: {
-    nav_how: 'Como funciona', nav_features: 'Recursos', nav_screenshots: 'Capturas de tela',
+    nav_how: 'Como funciona', nav_features: 'Recursos', nav_screenshots: 'Vídeo Explicativo',
     nav_pricing: 'Preço', nav_faq: 'FAQ',
     hero_badge: '✦ Para Windows 10 & 11',
     hero_title_1: 'Controle seu PC', hero_title_2: 'com sua voz.',
@@ -477,7 +477,7 @@ const translations = {
   },
 
   ko: {
-    nav_how: '작동 방식', nav_features: '기능', nav_screenshots: '스크린샷',
+    nav_how: '작동 방식', nav_features: '기능', nav_screenshots: '설명 영상',
     nav_pricing: '가격', nav_faq: 'FAQ',
     hero_badge: '✦ Windows 10 & 11용',
     hero_title_1: 'PC를 제어하세요', hero_title_2: '음성으로.',
@@ -537,7 +537,7 @@ const translations = {
   },
 
   ja: {
-    nav_how: '使い方', nav_features: '機能', nav_screenshots: 'スクリーンショット',
+    nav_how: '使い方', nav_features: '機能', nav_screenshots: '解説動画',
     nav_pricing: '価格', nav_faq: 'よくある質問',
     hero_badge: '✦ Windows 10 & 11 対応',
     hero_title_1: 'PCを操作しよう', hero_title_2: '声で。',
