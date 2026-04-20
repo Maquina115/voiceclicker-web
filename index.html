@@ -564,16 +564,19 @@
         <div class="pricing__card" role="region" aria-label="Plan de compra de Voice Clicker Pro">
           <div class="pricing__badge" data-i18n="price_badge">Pago único</div>
           <div class="pricing__amount">
-            <div class="pricing__price-main">
-              <span class="pricing__currency">€</span>
-              <span class="pricing__number">4<span class="pricing__decimal">,99</span></span>
-            </div>
+            <span class="pricing__currency">€</span>
           
-            <div class="pricing__price-meta">
-              <span class="pricing__old">€9,99</span>
-              <span class="pricing__discount">-50%</span>
+            <div class="pricing__price-block">
+              <span class="pricing__number" id="price-current"></span>
+          
+              <div class="pricing__discount" id="price-discount">
+                <span class="pricing__original" id="price-original"></span>
+                <span class="pricing__badge-offer" id="price-badge"></span>
+              </div>
             </div>
           </div>
+          
+          <p class="pricing__offer-until" id="price-until"></p>
           <p class="pricing__desc" data-i18n="price_desc">Todo incluido. Sin suscripciones. Sin límites de uso.</p>
           <ul class="pricing__features" aria-label="Qué incluye">
             <li data-i18n="price_f1">✓ Acciones de voz ilimitadas</li>
