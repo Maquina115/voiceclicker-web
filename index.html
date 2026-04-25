@@ -1,588 +1,864 @@
 <!DOCTYPE html>
-<html lang="es" dir="ltr">
+<html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <!-- SEO Primary -->
-  <title data-i18n="meta_title">Voice Clicker Pro — Control por Voz para Windows | Automatización con Comandos de Voz</title>
-  <meta name="description" data-i18n="meta_description" content="Voice Clicker Pro automatiza clics de ratón, teclas y texto con tu voz en Windows. Control remoto por Wi-Fi, 8 idiomas, sin cloud. Disponible en Microsoft Store." />
-  <meta name="keywords" content="voice clicker, control por voz, automatización windows, clicker voz, voice automation, voice commands windows, automatizar teclado ratón, voice recognition windows" />
+  <title>Sergio Labs — Apps & Videojuegos independientes</title>
+  <meta name="description" content="Sergio Labs es el estudio independiente de Sergio: aplicaciones útiles y videojuegos hechos con pasión. Descubre Voice Clicker Pro y próximos proyectos." />
+  <meta name="keywords" content="Sergio Labs, indie developer, apps windows, videojuegos indie, voice clicker pro, aplicaciones independientes" />
   <meta name="robots" content="index, follow" />
-  <meta name="author" content="Voice Clicker Pro" />
-  <link rel="canonical" href="https://voiceclickerpro.app/" />
-
-  <!-- Open Graph -->
+  <meta name="author" content="Sergio Labs" />
+  <link rel="canonical" href="https://sergiolabs.com/" />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://voiceclickerpro.app/" />
-  <meta property="og:title" data-i18n="meta_og_title" content="Voice Clicker Pro — Automatización por Voz para Windows" />
-  <meta property="og:description" data-i18n="meta_og_description" content="Controla tu PC con la voz. Automatiza clics, atajos de teclado y texto con comandos personalizados. Control remoto desde el móvil incluido." />
-  <meta property="og:image" content="img/og-image.png" />
-  <meta property="og:locale" content="es_ES" />
-
-  <!-- Twitter Cards -->
+  <meta property="og:url" content="https://sergiolabs.com/" />
+  <meta property="og:title" content="Sergio Labs — Apps & Videojuegos" />
+  <meta property="og:description" content="Aplicaciones útiles y videojuegos hechos con pasión por Sergio Labs." />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" data-i18n="meta_twitter_title" content="Voice Clicker Pro — Control por Voz para Windows" />
-  <meta name="twitter:description" data-i18n="meta_twitter_description" content="Automatiza tu PC con comandos de voz. Sin cloud, sin suscripción. Descárgalo en Microsoft Store." />
-  <meta name="twitter:image" content="img/og-image.png" />
+  <meta name="twitter:title" content="Sergio Labs" />
+  <meta name="twitter:description" content="Apps y videojuegos creados con pasión." />
 
-  <!-- Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "SoftwareApplication",
-        "name": "Voice Clicker Pro",
-        "applicationCategory": "UtilitiesApplication",
-        "operatingSystem": "Windows 10, Windows 11",
-        "description": "Desktop application for Windows that automates mouse clicks, keyboard shortcuts, and text input using voice commands. Includes Wi-Fi remote control, 8-language support, and offline voice recognition via Vosk.",
-        "offers": {
-          "@type": "Offer",
-          "price": "4.99",
-          "priceCurrency": "EUR",
-          "availability": "https://schema.org/InStock",
-          "url": "https://apps.microsoft.com/detail/voice-clicker-pro-id"
-        },
-        "softwareVersion": "1.0",
-        "downloadUrl": "https://apps.microsoft.com/detail/voice-clicker-pro-id",
-        "inLanguage": ["es", "en", "de", "tr", "zh", "pt", "ko", "ja"],
-        "featureList": [
-          "Voice-triggered mouse click automation",
-          "Keyboard shortcut automation via voice",
-          "Text input via voice commands",
-          "Wi-Fi remote control from mobile browser",
-          "Offline voice recognition (no cloud required)",
-          "Multi-step actions with configurable delays",
-          "8-language interface support"
-        ]
-      },
-      {
-        "@type": "Product",
-        "name": "Voice Clicker Pro",
-        "description": "Control your PC with your voice. Automate clicks, keyboard shortcuts and text input with custom voice commands on Windows.",
-        "brand": {
-          "@type": "Brand",
-          "name": "Voice Clicker Pro"
-        },
-        "offers": {
-          "@type": "Offer",
-          "price": "4.99",
-          "priceCurrency": "EUR",
-          "availability": "https://schema.org/InStock"
-        }
-      },
-      {
-        "@type": "Organization",
-        "name": "Voice Clicker Pro",
-        "url": "https://voiceclickerpro.app/",
-        "logo": "https://voiceclickerpro.app/img/logo.png",
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "contactType": "customer support",
-          "email": "support@voiceclickerpro.app"
-        }
-      },
-      {
-        "@type": "FAQPage",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "Does Voice Clicker Pro require an internet connection?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "No. Voice recognition runs entirely offline using the Vosk engine. No data is sent to any server."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "What Windows versions are supported?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Voice Clicker Pro supports Windows 10 and Windows 11 (64-bit)."
-            }
-          }
-        ]
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Outfit:wght@300;400;500;600;700;900&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg: #060608;
+      --bg2: #0d0d14;
+      --surface: #111118;
+      --surface2: #18181f;
+      --border: rgba(255,255,255,0.07);
+      --primary: #00e5a0;
+      --primary-dim: rgba(0,229,160,0.12);
+      --accent: #5b4fff;
+      --accent2: #ff4f91;
+      --text: #f0eeff;
+      --muted: #7a7a9a;
+      --faint: #2d2d3d;
+      --font-head: 'Outfit', sans-serif;
+      --font-mono: 'Space Mono', monospace;
+      --radius: 16px;
+      --radius-sm: 8px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font-head);
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    ul { list-style: none; }
+    img { max-width: 100%; display: block; }
+    button { cursor: pointer; font: inherit; background: none; border: none; }
+
+    :focus-visible { outline: 2px solid var(--primary); outline-offset: 3px; }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
       }
-    ]
-  }
-  </script>
+    }
 
-  <link rel="stylesheet" href="styles.css" />
+    /* ─── NOISE TEXTURE OVERLAY ─── */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 9999;
+      opacity: 0.3;
+    }
+
+    /* ─── HEADER ─── */
+    .header {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      padding: 20px 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--border);
+      background: rgba(6,6,8,0.85);
+      backdrop-filter: blur(16px);
+    }
+
+    .header__logo {
+      font-family: var(--font-mono);
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--primary);
+      letter-spacing: -0.02em;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .header__logo-mark {
+      width: 32px; height: 32px;
+      background: var(--primary);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #000;
+      font-size: 0.85rem;
+      font-weight: 700;
+    }
+
+    .header__nav {
+      display: flex;
+      gap: 32px;
+      align-items: center;
+    }
+
+    .header__nav a {
+      font-size: 0.875rem;
+      color: var(--muted);
+      transition: color 200ms;
+      font-weight: 500;
+    }
+
+    .header__nav a:hover { color: var(--text); }
+
+    .header__contact {
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      color: var(--primary);
+      border: 1px solid var(--primary);
+      padding: 8px 16px;
+      border-radius: var(--radius-sm);
+      transition: background 200ms, color 200ms;
+    }
+
+    .header__contact:hover {
+      background: var(--primary);
+      color: #000;
+    }
+
+    @media (max-width: 768px) {
+      .header { padding: 16px 20px; }
+      .header__nav { display: none; }
+    }
+
+    /* ─── HERO ─── */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding: 120px 32px 80px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero__grid-bg {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+      background-size: 60px 60px;
+    }
+
+    .hero__gradient {
+      position: absolute;
+      top: -20%;
+      left: -10%;
+      width: 70%;
+      height: 70%;
+      background: radial-gradient(ellipse, rgba(0,229,160,0.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero__gradient-2 {
+      position: absolute;
+      bottom: -10%;
+      right: -5%;
+      width: 50%;
+      height: 50%;
+      background: radial-gradient(ellipse, rgba(91,79,255,0.1) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero__inner {
+      max-width: 1100px;
+      margin: auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero__eyebrow {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--primary);
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .hero__eyebrow::before {
+      content: '';
+      display: block;
+      width: 40px; height: 1px;
+      background: var(--primary);
+    }
+
+    .hero__title {
+      font-family: var(--font-head);
+      font-size: clamp(3rem, 8vw, 6.5rem);
+      font-weight: 900;
+      line-height: 0.95;
+      letter-spacing: -0.04em;
+      margin-bottom: 32px;
+    }
+
+    .hero__title em {
+      font-style: normal;
+      color: var(--primary);
+    }
+
+    .hero__title .line-2 {
+      display: block;
+      color: var(--muted);
+      font-weight: 300;
+    }
+
+    .hero__desc {
+      font-size: 1.15rem;
+      color: var(--muted);
+      max-width: 520px;
+      line-height: 1.7;
+      margin-bottom: 48px;
+    }
+
+    .hero__desc strong { color: var(--text); font-weight: 600; }
+
+    .hero__scroll {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--faint);
+      letter-spacing: 0.1em;
+      animation: bounce 2s ease-in-out infinite;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(6px); }
+    }
+
+    /* ─── SECTION SHARED ─── */
+    .section {
+      padding: 100px 32px;
+    }
+
+    .section__inner {
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .section__kicker {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      color: var(--primary);
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .section__kicker::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+      max-width: 80px;
+    }
+
+    .section__title {
+      font-family: var(--font-head);
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+      margin-bottom: 16px;
+    }
+
+    .section__desc {
+      font-size: 1rem;
+      color: var(--muted);
+      max-width: 520px;
+      line-height: 1.7;
+    }
+
+    /* ─── PRODUCTS ─── */
+    .products-section {
+      padding: 80px 32px 120px;
+      background: var(--bg2);
+    }
+
+    .products__header {
+      max-width: 1100px;
+      margin: 0 auto 60px;
+    }
+
+    .products__grid {
+      max-width: 1100px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 24px;
+    }
+
+    /* ─── PRODUCT CARD ─── */
+    .product-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      position: relative;
+      overflow: hidden;
+      transition: border-color 300ms, transform 300ms, box-shadow 300ms;
+    }
+
+    .product-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--primary), var(--accent));
+      opacity: 0;
+      transition: opacity 300ms;
+    }
+
+    .product-card:hover {
+      border-color: rgba(0,229,160,0.3);
+      transform: translateY(-4px);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+    }
+
+    .product-card:hover::before { opacity: 1; }
+
+    .product-card--coming {
+      opacity: 0.5;
+      cursor: default;
+    }
+
+    .product-card--coming:hover {
+      transform: none;
+      border-color: var(--border);
+      box-shadow: none;
+    }
+
+    .product-card--coming:hover::before { opacity: 0; }
+
+    .product-card__header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .product-card__icon {
+      width: 56px; height: 56px;
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.6rem;
+      flex-shrink: 0;
+    }
+
+    .product-card__badge {
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 100px;
+    }
+
+    .badge--live {
+      background: rgba(0,229,160,0.12);
+      color: var(--primary);
+      border: 1px solid rgba(0,229,160,0.25);
+    }
+
+    .badge--soon {
+      background: rgba(255,255,255,0.05);
+      color: var(--muted);
+      border: 1px solid var(--border);
+    }
+
+    .product-card__name {
+      font-family: var(--font-head);
+      font-size: 1.35rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+    }
+
+    .product-card__type {
+      font-size: 0.75rem;
+      color: var(--muted);
+      font-family: var(--font-mono);
+      margin-top: 4px;
+    }
+
+    .product-card__desc {
+      font-size: 0.9rem;
+      color: var(--muted);
+      line-height: 1.65;
+      flex: 1;
+    }
+
+    .product-card__tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .tag {
+      font-size: 0.72rem;
+      font-family: var(--font-mono);
+      color: var(--muted);
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      padding: 4px 10px;
+      border-radius: 100px;
+    }
+
+    .product-card__cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--primary);
+      border: 1px solid rgba(0,229,160,0.3);
+      padding: 10px 20px;
+      border-radius: var(--radius-sm);
+      transition: background 200ms, color 200ms;
+      align-self: flex-start;
+      font-family: var(--font-mono);
+    }
+
+    .product-card__cta:hover {
+      background: var(--primary);
+      color: #000;
+      border-color: var(--primary);
+    }
+
+    .product-card__cta svg { width: 14px; height: 14px; transition: transform 200ms; }
+    .product-card__cta:hover svg { transform: translateX(3px); }
+
+    /* ─── ABOUT ─── */
+    .about-section {
+      padding: 100px 32px;
+    }
+
+    .about__inner {
+      max-width: 1100px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    @media (max-width: 768px) {
+      .about__inner { grid-template-columns: 1fr; gap: 48px; }
+    }
+
+    .about__text .section__title { margin-bottom: 24px; }
+
+    .about__body {
+      font-size: 1rem;
+      color: var(--muted);
+      line-height: 1.8;
+      margin-bottom: 16px;
+    }
+
+    .about__body strong { color: var(--text); }
+
+    .about__visual {
+      position: relative;
+    }
+
+    .about__card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 32px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .about__card::after {
+      content: '';
+      position: absolute;
+      bottom: -40%;
+      right: -20%;
+      width: 200px; height: 200px;
+      background: radial-gradient(circle, rgba(0,229,160,0.12), transparent 70%);
+      pointer-events: none;
+    }
+
+    .about__code {
+      font-family: var(--font-mono);
+      font-size: 0.82rem;
+      color: var(--muted);
+      line-height: 2;
+    }
+
+    .about__code .kw { color: #5b4fff; }
+    .about__code .fn { color: var(--primary); }
+    .about__code .str { color: #ff4f91; }
+    .about__code .cm { color: var(--faint); }
+
+    .about__values {
+      margin-top: 32px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .about__val {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+    .about__val-dot {
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--primary);
+      flex-shrink: 0;
+    }
+
+    /* ─── CONTACT ─── */
+    .contact-section {
+      padding: 100px 32px;
+      background: var(--bg2);
+      text-align: center;
+    }
+
+    .contact__inner {
+      max-width: 600px;
+      margin: auto;
+    }
+
+    .contact__title {
+      font-family: var(--font-head);
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 900;
+      letter-spacing: -0.04em;
+      line-height: 1.05;
+      margin-bottom: 20px;
+    }
+
+    .contact__title em {
+      font-style: normal;
+      color: var(--primary);
+    }
+
+    .contact__desc {
+      color: var(--muted);
+      font-size: 1rem;
+      margin-bottom: 40px;
+      line-height: 1.7;
+    }
+
+    .contact__email {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-family: var(--font-mono);
+      font-size: 0.95rem;
+      color: #000;
+      background: var(--primary);
+      padding: 14px 28px;
+      border-radius: var(--radius-sm);
+      font-weight: 700;
+      transition: opacity 200ms, transform 200ms;
+    }
+
+    .contact__email:hover { opacity: 0.88; transform: scale(1.02); }
+
+    /* ─── FOOTER ─── */
+    .footer {
+      padding: 32px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .footer__logo {
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+    .footer__copy {
+      font-size: 0.78rem;
+      color: var(--faint);
+      font-family: var(--font-mono);
+    }
+
+    .footer__links {
+      display: flex;
+      gap: 24px;
+    }
+
+    .footer__links a {
+      font-size: 0.8rem;
+      color: var(--muted);
+      font-family: var(--font-mono);
+      transition: color 200ms;
+    }
+
+    .footer__links a:hover { color: var(--primary); }
+
+    /* ─── SCROLL ANIMATIONS ─── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 600ms ease, transform 600ms ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: none;
+    }
+
+    @media (max-width: 600px) {
+      .section, .products-section, .about-section, .contact-section { padding: 60px 20px; }
+      .hero { padding: 100px 20px 60px; }
+      .header { padding: 14px 20px; }
+      .products__grid { grid-template-columns: 1fr; }
+      .footer { padding: 24px 20px; flex-direction: column; align-items: flex-start; }
+    }
+  </style>
 </head>
 <body>
 
-  <!-- ═══════════════════════════ HEADER ═══════════════════════════ -->
-  <header class="header" role="banner">
-    <div class="header__inner container">
-      <a href="#hero" class="header__logo" aria-label="Voice Clicker Pro — Inicio">
-        <!-- Aquí va el logo -->
-        <span class="header__logo-icon" aria-hidden="true">🎙️</span>
-        <span class="header__logo-text">Voice Clicker Pro</span>
-      </a>
-
-      <button class="header__nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="mainNav">
-        <span class="header__hamburger"></span>
-        <span class="header__hamburger"></span>
-        <span class="header__hamburger"></span>
-      </button>
-
-      <nav class="header__nav" id="mainNav" role="navigation" aria-label="Navegación principal">
-        <ul class="header__nav-list">
-          <li><a href="#how-it-works" class="header__nav-link" data-i18n="nav_how">Cómo funciona</a></li>
-          <li><a href="#features" class="header__nav-link" data-i18n="nav_features">Características</a></li>
-          <li><a href="#video" class="header__nav-link" data-i18n="nav_screenshots">Video Explicativo</a></li>
-          <li><a href="#pricing" class="header__nav-link" data-i18n="nav_pricing">Precio</a></li>
-          <li><a href="#faq" class="header__nav-link" data-i18n="nav_faq">FAQ</a></li>
-        </ul>
-      </nav>
-
-      <div class="header__lang" role="navigation" aria-label="Selector de idioma">
-        <button class="header__lang-btn" id="langBtn" aria-haspopup="listbox" aria-expanded="false" aria-label="Idioma actual: Español">
-          <span id="langBtnLabel">ES</span>
-          <svg class="header__lang-caret" aria-hidden="true" viewBox="0 0 10 6" width="10" height="6">
-            <path d="M0 0l5 6 5-6z" fill="currentColor"/>
-          </svg>
-        </button>
-        <ul class="header__lang-dropdown" id="langDropdown" role="listbox" aria-label="Idiomas disponibles">
-          <li role="option" data-lang="es" aria-selected="true">🇪🇸 Español</li>
-          <li role="option" data-lang="en" aria-selected="false">🇬🇧 English</li>
-          <li role="option" data-lang="de" aria-selected="false">🇩🇪 Deutsch</li>
-          <li role="option" data-lang="tr" aria-selected="false">🇹🇷 Türkçe</li>
-          <li role="option" data-lang="zh" aria-selected="false">🇨🇳 中文</li>
-          <li role="option" data-lang="pt" aria-selected="false">🇧🇷 Português</li>
-          <li role="option" data-lang="ko" aria-selected="false">🇰🇷 한국어</li>
-          <li role="option" data-lang="ja" aria-selected="false">🇯🇵 日本語</li>
-        </ul>
-      </div>
-    </div>
+  <!-- HEADER -->
+  <header class="header">
+    <a href="#" class="header__logo" aria-label="Sergio Labs - Inicio">
+      <div class="header__logo-mark" aria-hidden="true">SL</div>
+      Sergio Labs
+    </a>
+    <nav class="header__nav" aria-label="Navegación principal">
+      <a href="#products">Productos</a>
+      <a href="#about">Sobre mí</a>
+      <a href="#contact" class="header__contact">Contacto</a>
+    </nav>
   </header>
 
-  <main id="main-content">
+  <main>
 
-    <!-- ═══════════════════════════ HERO ═══════════════════════════ -->
-    <section class="hero" id="hero" aria-labelledby="heroHeading">
-      <div class="hero__bg" aria-hidden="true">
-        <div class="hero__bg-orb hero__bg-orb--1"></div>
-        <div class="hero__bg-orb hero__bg-orb--2"></div>
-        <div class="hero__bg-grid"></div>
+    <!-- HERO -->
+    <section class="hero" aria-labelledby="heroHeading">
+      <div class="hero__grid-bg" aria-hidden="true"></div>
+      <div class="hero__gradient" aria-hidden="true"></div>
+      <div class="hero__gradient-2" aria-hidden="true"></div>
+      <div class="hero__inner">
+        <p class="hero__eyebrow">Sergio Labs</p>
+        <h1 class="hero__title" id="heroHeading">
+          Construyo cosas<br>
+          <em>que funcionan.</em>
+          <span class="line-2">Apps. Juegos. Ideas.</span>
+        </h1>
+        <p class="hero__desc">
+          Soy <strong>Sergio</strong>, desarrollador independiente. Me apasiona crear herramientas útiles y experiencias interactivas — desde aplicaciones de escritorio hasta videojuegos.
+        </p>
+        <div class="hero__scroll" aria-hidden="true">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+          Scroll para ver proyectos
+        </div>
       </div>
-      <div class="hero__inner container">
-        <div class="hero__content">
-          <div class="hero__badge" data-i18n="hero_badge">✦ Para Windows 10 &amp; 11</div>
-          <h1 class="hero__title" id="heroHeading">
-            <span class="hero__title-line" data-i18n="hero_title_1">Controla tu PC</span>
-            <span class="hero__title-accent" data-i18n="hero_title_2">con tu voz.</span>
-          </h1>
-          <p class="hero__subtitle" data-i18n="hero_subtitle">
-            Voice Clicker Pro automatiza clics, atajos de teclado y texto con comandos de voz personalizados. Sin cloud, sin suscripción. 100% offline.
+    </section>
+
+    <!-- PRODUCTS -->
+    <section class="products-section" id="products" aria-labelledby="productsHeading">
+      <div class="products__header">
+        <p class="section__kicker">Proyectos</p>
+        <h2 class="section__title" id="productsHeading">Lo que estoy construyendo</h2>
+        <p class="section__desc">Cada proyecto nace de una necesidad real. Software que resuelve problemas de verdad.</p>
+      </div>
+
+      <div class="products__grid">
+
+        <!-- Voice Clicker Pro — LIVE -->
+        <article class="product-card reveal" aria-label="Voice Clicker Pro">
+          <div class="product-card__header">
+            <div class="product-card__icon" aria-hidden="true">🎙️</div>
+            <span class="product-card__badge badge--live">Disponible</span>
+          </div>
+          <div>
+            <h3 class="product-card__name">Voice Clicker Pro</h3>
+            <p class="product-card__type">// Windows App</p>
+          </div>
+          <p class="product-card__desc">
+            Automatiza clics de ratón, atajos de teclado y texto con comandos de voz personalizados. 100% offline, sin cloud, sin suscripción. Funciona con cualquier aplicación de Windows.
           </p>
-          <div class="hero__cta-group">
-            <a href="https://apps.microsoft.com/detail/9NT4K8DXNHBM?hl=es&gl=ES&ocid=pdpshare" class="btn btn--primary btn--large hero__cta" rel="noopener noreferrer" target="_blank" data-i18n="hero_cta_buy">
-              <svg aria-hidden="true" viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M3 3h8v8H3V3zm10 0h8v8h-8V3zM3 13h8v8H3v-8zm10 3.5a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0z"/></svg>
-              Comprar en Microsoft Store
-            </a>
-            <a href="#how-it-works" class="btn btn--ghost hero__cta-secondary" data-i18n="hero_cta_learn">Ver cómo funciona</a>
+          <div class="product-card__tags">
+            <span class="tag">Windows 10/11</span>
+            <span class="tag">Offline</span>
+            <span class="tag">Accesibilidad</span>
+            <span class="tag">Automatización</span>
           </div>
-          <p class="hero__trust" data-i18n="hero_trust">
-            🔒 Sin conexión a internet · 🌍 8 idiomas · 🖥️ Windows 10/11
-          </p>
-        </div>
-       <iframe width="560" height="315" src="https://www.youtube.com/embed/0KRyBC1XO44?si=29rLEFMLE-bjyf2-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══════════════════════════ HOW IT WORKS ═══════════════════════════ -->
-    <section class="how" id="how-it-works" aria-labelledby="howHeading">
-      <div class="container">
-        <header class="section-header">
-          <p class="section-header__kicker" data-i18n="how_kicker">Flujo de uso</p>
-          <h2 class="section-header__title" id="howHeading" data-i18n="how_title">Tres pasos. Empieza en minutos.</h2>
-          <p class="section-header__desc" data-i18n="how_desc">Sin configuración compleja, sin drivers extra. Instala, define tus acciones y habla.</p>
-        </header>
-        <ol class="how__steps" aria-label="Pasos de uso de Voice Clicker Pro">
-          <li class="how__step">
-            <div class="how__step-num" aria-hidden="true">01</div>
-            <div class="how__step-icon" aria-hidden="true">⚡</div>
-            <h3 class="how__step-title" data-i18n="how_step1_title">Instala la app</h3>
-            <p class="how__step-desc" data-i18n="how_step1_desc">Descarga Voice Clicker Pro desde Microsoft Store. Se instala en segundos, sin dependencias externas ni permisos de administrador.</p>
-          </li>
-          <li class="how__step">
-            <div class="how__step-num" aria-hidden="true">02</div>
-            <div class="how__step-icon" aria-hidden="true">🛠️</div>
-            <h3 class="how__step-title" data-i18n="how_step2_title">Define tus acciones</h3>
-            <p class="how__step-desc" data-i18n="how_step2_desc">Crea acciones con triggers de voz personalizados. Cada acción puede encadenar clics, teclas, atajos y texto en el orden que quieras.</p>
-          </li>
-          <li class="how__step">
-            <div class="how__step-num" aria-hidden="true">03</div>
-            <div class="how__step-icon" aria-hidden="true">🎙️</div>
-            <h3 class="how__step-title" data-i18n="how_step3_title">Habla y automatiza</h3>
-            <p class="how__step-desc" data-i18n="how_step3_desc">Activa el micrófono y di el trigger. Voice Clicker Pro ejecuta la acción al instante, sin necesidad de internet ni de mantener el foco en la app.</p>
-          </li>
-        </ol>
-      </div>
-    </section>
-
-    <!-- ═══════════════════════════ FEATURES ═══════════════════════════ -->
-    <section class="features" id="features" aria-labelledby="featuresHeading">
-      <div class="container">
-        <header class="section-header">
-          <p class="section-header__kicker" data-i18n="feat_kicker">Funcionalidades</p>
-          <h2 class="section-header__title" id="featuresHeading" data-i18n="feat_title">Todo lo que necesitas para automatizar</h2>
-        </header>
-        <ul class="features__grid" aria-label="Características principales de Voice Clicker Pro">
-          <li class="feature-card">
-            <div class="feature-card__icon" aria-hidden="true">🖱️</div>
-            <h3 class="feature-card__title" data-i18n="feat1_title">Clics de ratón por voz</h3>
-            <p class="feature-card__desc" data-i18n="feat1_desc">Define coordenadas exactas capturando clics en pantalla. Botón izquierdo, derecho o central. Configura el número de clics por paso.</p>
-          </li>
-          <li class="feature-card">
-            <div class="feature-card__icon" aria-hidden="true">⌨️</div>
-            <h3 class="feature-card__title" data-i18n="feat2_title">Atajos de teclado</h3>
-            <p class="feature-card__desc" data-i18n="feat2_desc">Ejecuta cualquier combinación de teclas: Ctrl+C, Alt+Tab, Ctrl+Shift+S… Captura la combinación en tiempo real con un clic.</p>
-          </li>
-          <li class="feature-card">
-            <div class="feature-card__icon" aria-hidden="true">💬</div>
-            <h3 class="feature-card__title" data-i18n="feat3_title">Escritura automática de texto</h3>
-            <p class="feature-card__desc" data-i18n="feat3_desc">Escribe bloques de texto completos con un solo comando. Ideal para respuestas frecuentes, firmas de correo o formularios repetitivos.</p>
-          </li>
-          <li class="feature-card">
-            <div class="feature-card__icon" aria-hidden="true">📱</div>
-            <h3 class="feature-card__title" data-i18n="feat4_title">Control remoto por Wi-Fi</h3>
-            <p class="feature-card__desc" data-i18n="feat4_desc">Activa el servidor integrado y controla tus acciones desde el navegador de tu móvil. Sin apps extra. PIN de acceso configurable.</p>
-          </li>
-          <li class="feature-card">
-            <div class="feature-card__icon" aria-hidden="true">🔗</div>
-            <h3 class="feature-card__title" data-i18n="feat5_title">Pasos múltiples encadenados</h3>
-            <p class="feature-card__desc" data-i18n="feat5_desc">Combina clics, teclas, texto y hotkeys en una sola acción. Añade delays entre pasos para sincronizar con animaciones o tiempos de carga.</p>
-          </li>
-          <li class="feature-card">
-            <div class="feature-card__icon" aria-hidden="true">🌐</div>
-            <h3 class="feature-card__title" data-i18n="feat6_title">8 idiomas de interfaz</h3>
-            <p class="feature-card__desc" data-i18n="feat6_desc">Disponible en español, inglés, alemán, turco, chino, portugués, coreano y japonés. El idioma de reconocimiento de voz es independiente.</p>
-          </li>
-          <li class="feature-card">
-            <div class="feature-card__icon" aria-hidden="true">🔒</div>
-            <h3 class="feature-card__title" data-i18n="feat7_title">100% offline, sin cloud</h3>
-            <p class="feature-card__desc" data-i18n="feat7_desc">El reconocimiento de voz funciona localmente con el motor Vosk. Ningún audio sale de tu equipo. Privacidad total garantizada.</p>
-          </li>
-          <li class="feature-card">
-            <div class="feature-card__icon" aria-hidden="true">🔁</div>
-            <h3 class="feature-card__title" data-i18n="feat8_title">Cooldown y repetición</h3>
-            <p class="feature-card__desc" data-i18n="feat8_desc">Evita disparos accidentales con cooldown configurable en milisegundos. Repite una acción N veces con un solo comando de voz.</p>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- ═══════════════════════════ BENEFITS ═══════════════════════════ -->
-    <section class="benefits" id="benefits" aria-labelledby="benefitsHeading">
-      <div class="container">
-        <div class="benefits__inner">
-          <div class="benefits__content">
-            <p class="section-header__kicker" data-i18n="ben_kicker">Por qué elegirlo</p>
-            <h2 class="benefits__title" id="benefitsHeading" data-i18n="ben_title">Productividad real, sin compromiso de privacidad</h2>
-            <ul class="benefits__list">
-              <li class="benefits__item">
-                <span class="benefits__item-icon" aria-hidden="true">✓</span>
-                <div>
-                  <strong data-i18n="ben1_title">Sin suscripción, sin sorpresas</strong>
-                  <p data-i18n="ben1_desc">Pago único. Sin cuota mensual, sin caducidad de licencia, sin funciones bloqueadas.</p>
-                </div>
-              </li>
-              <li class="benefits__item">
-                <span class="benefits__item-icon" aria-hidden="true">✓</span>
-                <div>
-                  <strong data-i18n="ben2_title">Funciona con cualquier app de Windows</strong>
-                  <p data-i18n="ben2_desc">No es un plugin ni una extensión. Opera a nivel de sistema: funciona con cualquier software instalado.</p>
-                </div>
-              </li>
-              <li class="benefits__item">
-                <span class="benefits__item-icon" aria-hidden="true">✓</span>
-                <div>
-                  <strong data-i18n="ben3_title">Accesibilidad y ergonomía</strong>
-                  <p data-i18n="ben3_desc">Ideal para reducir el uso del ratón y teclado. Útil en movilidad reducida, lesiones de muñeca o trabajo con manos ocupadas.</p>
-                </div>
-              </li>
-              <li class="benefits__item">
-                <span class="benefits__item-icon" aria-hidden="true">✓</span>
-                <div>
-                  <strong data-i18n="ben4_title">Control remoto sin instalar nada en el móvil</strong>
-                  <p data-i18n="ben4_desc">El panel remoto corre en tu navegador del teléfono. Sin apps extra. Conexión local por Wi-Fi, segura y rápida.</p>
-                </div>
-              </li>
-            </ul>
-          </div>
-          <div class="benefits__visual" aria-hidden="true">
-            <div class="benefits__stat-card">
-              <div class="benefits__stat-num">8</div>
-              <div class="benefits__stat-label" data-i18n="ben_stat_lang">Idiomas</div>
-            </div>
-            <div class="benefits__stat-card benefits__stat-card--accent">
-              <div class="benefits__stat-num">∞</div>
-              <div class="benefits__stat-label" data-i18n="ben_stat_actions">Acciones personalizadas</div>
-            </div>
-            <div class="benefits__stat-card">
-              <div class="benefits__stat-num">0</div>
-              <div class="benefits__stat-label" data-i18n="ben_stat_cloud">Datos enviados a la nube</div>
-            </div>
-            <div class="benefits__stat-card benefits__stat-card--accent">
-              <div class="benefits__stat-num">4</div>
-              <div class="benefits__stat-label" data-i18n="ben_stat_steps">Tipos de pasos</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══════════════════════════ SCREENSHOTS ═══════════════════════════ -->
-    <section class="screenshots" id="screenshots" aria-labelledby="screenshotsHeading">
-      <div class="container">
-        <header class="section-header">
-          <p class="section-header__kicker" data-i18n="screens_kicker">En imágenes</p>
-          <h2 class="section-header__title" id="screenshotsHeading" data-i18n="screens_title">Diseñado para claridad y velocidad</h2>
-        </header>
-        <div class="screenshots__gallery" role="list">
-          <figure class="screenshots__item" role="listitem">
-            <!-- Aquí va captura de pantalla de la pantalla principal (lista de acciones) -->
-            <div class="screenshots__placeholder" aria-label="Captura de pantalla: pantalla principal">
-              <span aria-hidden="true">🖥️</span>
-            </div>
-            <figcaption class="screenshots__caption" data-i18n="screen1_cap">Panel principal — lista de acciones de voz</figcaption>
-          </figure>
-          <figure class="screenshots__item" role="listitem">
-            <!-- Aquí va captura de pantalla del editor de pasos -->
-            <div class="screenshots__placeholder" aria-label="Captura de pantalla: editor de pasos">
-              <span aria-hidden="true">🛠️</span>
-            </div>
-            <figcaption class="screenshots__caption" data-i18n="screen2_cap">Editor de pasos — configura clics, teclas y texto</figcaption>
-          </figure>
-          <figure class="screenshots__item" role="listitem">
-            <!-- Aquí va captura de pantalla del panel remoto en móvil -->
-            <div class="screenshots__placeholder" aria-label="Captura de pantalla: panel de control remoto">
-              <span aria-hidden="true">📱</span>
-            </div>
-            <figcaption class="screenshots__caption" data-i18n="screen3_cap">Control remoto — panel web accesible desde el móvil</figcaption>
-          </figure>
-          <figure class="screenshots__item" role="listitem">
-            <!-- Aquí va captura de pantalla del panel de ajustes -->
-            <div class="screenshots__placeholder" aria-label="Captura de pantalla: ajustes de idioma y servidor">
-              <span aria-hidden="true">⚙️</span>
-            </div>
-            <figcaption class="screenshots__caption" data-i18n="screen4_cap">Ajustes — idioma, tema y PIN del servidor remoto</figcaption>
-          </figure>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══════════════════════════ VIDEO ═══════════════════════════ -->
-    <section class="video-section" id="video" aria-labelledby="videoHeading">
-      <div class="container">
-        <header class="section-header">
-          <p class="section-header__kicker" data-i18n="video_kicker">Demo</p>
-          <h2 class="section-header__title" id="videoHeading" data-i18n="video_title">Míralo en acción</h2>
-          <p class="section-header__desc" data-i18n="video_desc">Un minuto es suficiente para entender todo el potencial de Voice Clicker Pro.</p>
-        </header>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/0KRyBC1XO44?si=29rLEFMLE-bjyf2-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-      </div>
-    </section>
-
-    <!-- ═══════════════════════════ TESTIMONIALS ═══════════════════════════ -->
-    <section class="testimonials" id="testimonials" aria-labelledby="testimonialsHeading">
-      <div class="container">
-        <header class="section-header">
-          <p class="section-header__kicker" data-i18n="test_kicker">Testimonios</p>
-          <h2 class="section-header__title" id="testimonialsHeading" data-i18n="test_title">Lo que dicen los usuarios</h2>
-        </header>
-        <div class="testimonials__grid">
-          <article class="testimonial-card" aria-label="Testimonio de usuario">
-            <div class="testimonial-card__stars" aria-label="5 de 5 estrellas">★★★★★</div>
-            <blockquote class="testimonial-card__quote">
-              <p data-i18n="test1_quote">"Uso Voice Clicker Pro para presentaciones. Con 'siguiente' avanzo la diapositiva sin tocar el ratón. Increíble en reuniones con el portátil lejos."</p>
-            </blockquote>
-            <footer class="testimonial-card__author">
-              <div class="testimonial-card__avatar" aria-hidden="true">MR</div>
-              <div>
-                <cite class="testimonial-card__name">Marcos R.</cite>
-                <p class="testimonial-card__role" data-i18n="test1_role">Consultor de negocio</p>
-              </div>
-            </footer>
-          </article>
-          <article class="testimonial-card testimonial-card--featured" aria-label="Testimonio destacado">
-            <div class="testimonial-card__stars" aria-label="5 de 5 estrellas">★★★★★</div>
-            <blockquote class="testimonial-card__quote">
-              <p data-i18n="test2_quote">"Tengo una lesión de túnel carpiano y este programa me ha devuelto la productividad. Defino mis atajos una vez y los ejecuto con la voz. Lo recomiendo a cualquiera que trabaje mucho con el teclado."</p>
-            </blockquote>
-            <footer class="testimonial-card__author">
-              <div class="testimonial-card__avatar" aria-hidden="true">SL</div>
-              <div>
-                <cite class="testimonial-card__name">Sofía L.</cite>
-                <p class="testimonial-card__role" data-i18n="test2_role">Desarrolladora de software</p>
-              </div>
-            </footer>
-          </article>
-          <article class="testimonial-card" aria-label="Testimonio de usuario">
-            <div class="testimonial-card__stars" aria-label="5 de 5 estrellas">★★★★★</div>
-            <blockquote class="testimonial-card__quote">
-              <p data-i18n="test3_quote">"El control remoto desde el móvil es genial. Tengo el PC conectado a la tele y puedo lanzar acciones desde el sofá. Sin conexión a internet, todo local."</p>
-            </blockquote>
-            <footer class="testimonial-card__author">
-              <div class="testimonial-card__avatar" aria-hidden="true">JP</div>
-              <div>
-                <cite class="testimonial-card__name">Javier P.</cite>
-                <p class="testimonial-card__role" data-i18n="test3_role">Streamer y creador de contenido</p>
-              </div>
-            </footer>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══════════════════════════ FAQ ═══════════════════════════ -->
-    <section class="faq" id="faq" aria-labelledby="faqHeading">
-      <div class="container">
-        <header class="section-header">
-          <p class="section-header__kicker" data-i18n="faq_kicker">Preguntas frecuentes</p>
-          <h2 class="section-header__title" id="faqHeading" data-i18n="faq_title">Todo lo que necesitas saber</h2>
-        </header>
-        <dl class="faq__list">
-          <div class="faq__item">
-            <dt class="faq__question">
-              <button class="faq__toggle" aria-expanded="false" aria-controls="faq1-answer">
-                <span class="faq__text" data-i18n="faq1_q"></span>
-                <span class="faq__toggle-icon" aria-hidden="true">+</span>
-              </button>
-            </dt>
-            <dd class="faq__answer" id="faq1-answer" hidden>
-              <p data-i18n="faq1_a">No. Voice Clicker Pro funciona completamente offline. El reconocimiento de voz usa el motor Vosk, que se ejecuta localmente en tu PC. Ningún audio ni dato personal se envía a ningún servidor.</p>
-            </dd>
-          </div>
-          <div class="faq__item">
-            <dt class="faq__question">
-              <button class="faq__toggle" aria-expanded="false" aria-controls="faq2-answer">
-                <span class="faq__text" data-i18n="faq2_q"></span>
-                <span class="faq__toggle-icon" aria-hidden="true">+</span>
-              </button>
-            </dt>
-            <dd class="faq__answer" id="faq2-answer" hidden>
-              <p data-i18n="faq2_a">Voice Clicker Pro es compatible con Windows 10 y Windows 11 en arquitectura 64 bits. No es compatible con macOS ni Linux en esta versión.</p>
-            </dd>
-          </div>
-          <div class="faq__item">
-            <dt class="faq__question">
-              <but<button class="faq__toggle" aria-expanded="false" aria-controls="faq3-answer">
-                <span class="faq__text" data-i18n="faq3_q"></span>
-                <span class="faq__toggle-icon" aria-hidden="true">+</span>
-              </button>
-            </dt>
-            <dd class="faq__answer" id="faq3-answer" hidden>
-              <p data-i18n="faq3_a">La versión actual incluye el modelo de reconocimiento de voz en español. Los idiomas de la interfaz (ES, EN, DE, TR, ZH, PT, KO, JA) son independientes del motor de voz.</p>
-            </dd>
-          </div>
-          <div class="faq__item">
-            <dt class="faq__question">
-              <button class="faq__toggle" aria-expanded="false" aria-controls="faq4-answer">
-                <span class="faq__text" data-i18n="faq4_q"></span>
-                <span class="faq__toggle-icon" aria-hidden="true">+</span>
-              </button>
-            </dt>
-            <dd class="faq__answer" id="faq4-answer" hidden>
-              <p data-i18n="faq4_a">Pago único en Microsoft Store. No hay cuota mensual, no hay funciones premium bloqueadas, no hay anuncios. Lo compras una vez y es tuyo para siempre, incluyendo actualizaciones de mantenimiento.</p>
-            </dd>
-          </div>
-          <div class="faq__item">
-            <dt class="faq__question">
-              <button class="faq__toggle" aria-expanded="false" aria-controls="faq5-answer">
-                <span class="faq__text" data-i18n="faq5_q"></span>
-                <span class="faq__toggle-icon" aria-hidden="true">+</span>
-              </button>
-            </dt>
-            <dd class="faq__answer" id="faq5-answer" hidden>
-              <p data-i18n="faq5_a">Desde la app, activa el servidor remoto. La app mostrará la URL local de tu red Wi-Fi. Ábrela en el navegador de tu móvil, introduce el PIN y tendrás acceso a todas tus acciones.</p>
-            </dd>
-          </div>
-          <div class="faq__item">
-            <dt class="faq__question">
-              <button class="faq__toggle" aria-expanded="false" aria-controls="faq6-answer">
-                <span class="faq__text" data-i18n="faq6_q"></span>
-                <span class="faq__toggle-icon" aria-hidden="true">+</span>
-              </button>
-            </dt>
-            <dd class="faq__answer" id="faq6-answer" hidden>
-              <p data-i18n="faq6_a">Sí, es uno de sus usos principales. Si tienes movilidad reducida en manos o brazos, o sufres lesiones como el síndrome del túnel carpiano, Voice Clicker Pro puede reducir drásticamente el uso físico del ratón y teclado.</p>
-            </dd>
-          </div>
-        </dl>
-      </div>
-    </section>
-
-    <!-- ═══════════════════════════ PRICING ═══════════════════════════ -->
-    <section class="pricing" id="pricing" aria-labelledby="pricingHeading">
-      <div class="container">
-        <header class="section-header">
-          <p class="section-header__kicker" data-i18n="price_kicker">Precio</p>
-          <h2 class="section-header__title" id="pricingHeading" data-i18n="price_title">Simple. Sin sorpresas.</h2>
-        </header>
-        <div class="pricing__card" role="region" aria-label="Plan de compra de Voice Clicker Pro">
-          <div class="pricing__badge" data-i18n="price_badge">Pago único</div>
-          <div class="pricing__amount">
-            <span class="pricing__currency">€</span>
-          
-            <div class="pricing__price-block">
-              <span class="pricing__number" id="price-current"></span>
-          
-              <div class="pricing__discount" id="price-discount">
-                <span class="pricing__original" id="price-original"></span>
-                <span class="pricing__badge-offer" id="price-badge"></span>
-              </div>
-            </div>
-          </div>
-          
-          <p class="pricing__offer-until" id="price-until"></p>
-          <p class="pricing__desc" data-i18n="price_desc">Todo incluido. Sin suscripciones. Sin límites de uso.</p>
-          <ul class="pricing__features" aria-label="Qué incluye">
-            <li data-i18n="price_f1">✓ Acciones de voz ilimitadas</li>
-            <li data-i18n="price_f2">✓ Control remoto Wi-Fi incluido</li>
-            <li data-i18n="price_f3">✓ 8 idiomas de interfaz</li>
-            <li data-i18n="price_f4">✓ Actualizaciones de mantenimiento</li>
-            <li data-i18n="price_f5">✓ Reconocimiento de voz offline</li>
-            <li data-i18n="price_f6">✓ Soporte por email</li>
-          </ul>
-          <a href="https://apps.microsoft.com/detail/9NT4K8DXNHBM?hl=es&gl=ES&ocid=pdpshare" class="btn btn--primary btn--large pricing__cta" rel="noopener noreferrer" target="_blank" data-i18n="price_cta">
-            <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M3 3h8v8H3V3zm10 0h8v8h-8V3zM3 13h8v8H3v-8zm10 3.5a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0z"/></svg>
-            Comprar en Microsoft Store
+          <a href="https://voiceclickerpro.app" class="product-card__cta" target="_blank" rel="noopener noreferrer">
+            Ver producto
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </a>
-          <p class="pricing__trust" data-i18n="price_trust">🔐 Transacción segura a través de Microsoft · Soporte garantizado</p>
+        </article>
+
+        <!-- Placeholder — COMING SOON -->
+        <article class="product-card product-card--coming reveal" aria-label="Próximo proyecto">
+          <div class="product-card__header">
+            <div class="product-card__icon" aria-hidden="true">🎮</div>
+            <span class="product-card__badge badge--soon">Próximamente</span>
+          </div>
+          <div>
+            <h3 class="product-card__name">???</h3>
+            <p class="product-card__type">// Videojuego</p>
+          </div>
+          <p class="product-card__desc">
+            Un proyecto en desarrollo. Algo interactivo, con alma propia. Más información cuando esté listo.
+          </p>
+          <div class="product-card__tags">
+            <span class="tag">En desarrollo</span>
+            <span class="tag">Indie</span>
+          </div>
+        </article>
+
+        <!-- Placeholder 2 — COMING SOON -->
+        <article class="product-card product-card--coming reveal" aria-label="Próxima aplicación">
+          <div class="product-card__header">
+            <div class="product-card__icon" aria-hidden="true">⚙️</div>
+            <span class="product-card__badge badge--soon">Próximamente</span>
+          </div>
+          <div>
+            <h3 class="product-card__name">Próxima app</h3>
+            <p class="product-card__type">// Utilidad</p>
+          </div>
+          <p class="product-card__desc">
+            Más herramientas en el camino. Si tienes una idea o necesitas algo, escríbeme.
+          </p>
+          <div class="product-card__tags">
+            <span class="tag">Ideación</span>
+            <span class="tag">Windows</span>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about-section" id="about" aria-labelledby="aboutHeading">
+      <div class="about__inner">
+        <div class="about__text reveal">
+          <p class="section__kicker">Sobre mí</p>
+          <h2 class="section__title" id="aboutHeading">Hola, soy Sergio.</h2>
+          <p class="about__body">
+            Me gusta <strong>crear</strong>. Desde que descubrí que podía construir cosas con código, no paré. Me interesan los problemas reales que la gente tiene en su día a día, y busco resolverlos con software bien hecho.
+          </p>
+          <p class="about__body">
+            Trabajo en <strong>aplicaciones de escritorio</strong> y <strong>videojuegos indie</strong>. No soy una empresa grande ni un equipo — soy una persona que hace las cosas con cuidado y con pasión.
+          </p>
+          <div class="about__values">
+            <div class="about__val"><div class="about__val-dot"></div>Software útil</div>
+            <div class="about__val"><div class="about__val-dot"></div>Privacidad primero</div>
+            <div class="about__val"><div class="about__val-dot"></div>Sin suscripciones</div>
+            <div class="about__val"><div class="about__val-dot"></div>Hecho con cuidado</div>
+          </div>
         </div>
+
+        <div class="about__visual reveal">
+          <div class="about__card">
+            <pre class="about__code"><code><span class="cm">// Sergio Labs — quién soy</span>
+
+<span class="kw">const</span> <span class="fn">sergio</span> = {
+  rol:       <span class="str">"Indie Developer"</span>,
+  le_gusta:  [
+    <span class="str">"crear apps"</span>,
+    <span class="str">"hacer videojuegos"</span>,
+    <span class="str">"resolver problemas"</span>,
+  ],
+  filosofia: <span class="str">"Simple, útil, honesto"</span>,
+  contacto:  <span class="str">"support@sergiolabs.com"</span>
+};</code></pre>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact-section" id="contact" aria-labelledby="contactHeading">
+      <div class="contact__inner reveal">
+        <p class="section__kicker" style="justify-content: center;">Contacto</p>
+        <h2 class="contact__title" id="contactHeading">¿Tienes algo<br>en <em>mente</em>?</h2>
+        <p class="contact__desc">
+          Si tienes preguntas sobre mis apps, una idea para un proyecto o simplemente quieres decir hola — escríbeme.
+        </p>
+        <a href="mailto:support@sergiolabs.com" class="contact__email">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          support@sergiolabs.com
+        </a>
       </div>
     </section>
 
   </main>
 
-  <!-- ═══════════════════════════ FOOTER ═══════════════════════════ -->
-  <footer class="footer" role="contentinfo">
-    <div class="container">
-      <div class="footer__inner">
-        <div class="footer__brand">
-          <span class="footer__logo" aria-label="Voice Clicker Pro">🎙️ Voice Clicker Pro</span>
-          <p class="footer__tagline" data-i18n="footer_tagline">Automatización por voz para Windows.</p>
-        </div>
-        <nav class="footer__nav" aria-label="Navegación del pie de página">
-          <ul class="footer__nav-list">
-            <li><a href="privacy.html" class="footer__nav-link" data-i18n="footer_privacy">Política de privacidad</a></li>
-            <li><a href="terms.html" class="footer__nav-link" data-i18n="footer_terms">Términos y condiciones</a></li>
-            <li><a href="mailto:support@voiceclickerpro.app" class="footer__nav-link" data-i18n="footer_support">Soporte</a></li>
-          </ul>
-        </nav>
-      </div>
-      <p class="footer__copy">
-        <span data-i18n="footer_copy">© 2025 Voice Clicker Pro. Todos los derechos reservados.</span>
-      </p>
+  <!-- FOOTER -->
+  <footer class="footer">
+    <span class="footer__logo">Sergio Labs</span>
+    <div class="footer__links">
+      <a href="https://voiceclickerpro.app/privacy.html">Privacidad</a>
+      <a href="mailto:support@sergiolabs.com">Soporte</a>
     </div>
+    <span class="footer__copy">© 2026 Sergio Labs</span>
   </footer>
 
-  <script src="script.js"></script>
+  <script>
+    // Scroll reveal
+    const reveals = document.querySelectorAll('.reveal');
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e, i) => {
+        if (e.isIntersecting) {
+          setTimeout(() => e.target.classList.add('visible'), i * 80);
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    reveals.forEach(el => io.observe(el));
+  </script>
+
 </body>
 </html>
